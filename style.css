@@ -1,13 +1,17 @@
-*{
+html, body{
     margin: 0;
     padding: 0;
     background-color: black;
     color: aliceblue;
-  }
-  
-  html, body{
+    overflow-x: hidden;
     font-family: "Montserrat", sans-serif;
   }
+  
+
+a {
+    color: inherit; /* Utilise la couleur héritée */
+    text-decoration: none; /* Enlève le soulignement par défaut */
+}
 
 /* HEADER */
 .header{
@@ -46,7 +50,7 @@
 }
 
 .menu{
-    background-color: #101117;
+    background-color: black;
     width: 80%;
     text-align: center;
     line-height: 10vh;
@@ -124,7 +128,7 @@
     position: relative;
     width: 40vw;
     height: 50vh;
-    background-color: red;
+    background-color: #5941A9;
 }
 
 
@@ -157,7 +161,7 @@
 }
 
 .portfolio-projet-text h3{
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .portfolio-projet-image{
@@ -183,7 +187,7 @@
 }
 
 .ft_transcendance-projet-text h3{
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .ft_transcendance-projet-image{
@@ -231,6 +235,7 @@
 
 .competences h2{
     background-color: #7f7979;
+    padding-left: 2%;
 }
 
 .competences:before {
@@ -256,6 +261,51 @@
     transform-origin: right bottom;
     transform: skewY(2deg);
   }
+
+.competences .logo{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   /* ETUDES */
 .etudes{
