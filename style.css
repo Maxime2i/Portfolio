@@ -9,7 +9,7 @@
     font-family: "Montserrat", sans-serif;
   }
 
-
+/* HEADER */
 .header{
     display: flex;
     flex-direction: row;
@@ -68,28 +68,19 @@
   }
 
 
-  h2{
-    padding: 1%;
-  }
 
 
-.canvas{
-    height: 50vh;
-}
-
+/* A PROPOS */
 .apropos{
+    width: 100vw;
     height: 50vh;
-    background-color: #7f7979;
+    background-color: #7f7997;
     position: relative;
     padding: 50px 0;
     z-index: 5;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     color: black;
-}
-
-.apropos h2{
-    background-color: #7f7979;
 }
 
 .apropos:before {
@@ -116,11 +107,117 @@
     transform: skewY(2deg);
   }
 
-
-.projets{
-    height: 50vh;
+.apropos .text{
+    position: relative;
+    width: 60vw;
+    padding: 2%;
+    background-color: #7f7997;
 }
 
+.apropos .title{
+    position: relative;
+    background-color: #7f7997;
+}
+
+/* CANVAS */
+.canvas{
+    position: relative;
+    width: 40vw;
+    height: 50vh;
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+/* PROJETS */
+.projets{
+    padding-top: 10%;
+    padding-left: 50px;
+    height: 130vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-projet{
+    padding: 5%;
+    display: flex;
+    flex-direction: row;
+    line-height: 2;
+}
+
+.portfolio-projet-text{
+    width: 70vw;
+}
+
+.portfolio-projet-text h3{
+    font-size: 2rem;
+}
+
+.portfolio-projet-image{
+    width: 30vw;
+}
+
+
+
+
+
+
+.ft_transcendance-projet{
+    padding: 5%;
+    display: flex;
+    flex-direction: row;
+    line-height: 2;
+
+}
+
+.ft_transcendance-projet-text{
+    width: 70vw;
+    padding-left: 1%;
+}
+
+.ft_transcendance-projet-text h3{
+    font-size: 2rem;
+}
+
+.ft_transcendance-projet-image{
+    width: 30vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* COMPETENCES */
 .competences{
     height: 50vh;
     background-color: #7f7979;
@@ -160,10 +257,12 @@
     transform: skewY(2deg);
   }
 
+  /* ETUDES */
 .etudes{
-    height: 50vh;
+    height: 80vh;
 }
 
+/* EXPERIENCES */
 .experiences{
     height: 50vh;
     background-color: #7f7979;
@@ -203,6 +302,7 @@
     transform: skewY(2deg);
   }
 
+  /* CONTACT */
 .contact{
-    height: 50vh;
+    height: 80vh;
 }
