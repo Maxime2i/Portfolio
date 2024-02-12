@@ -326,7 +326,7 @@ a {
 
 .etudes .title{
     align-self: flex-start;
-    padding-left: 3%;
+    padding-left: 2%;
 }
 
 .etudes .school{
@@ -347,34 +347,9 @@ a {
     
 }
 
-.img-container1{
-    perspective: 1000px;
-}
 
-.img-school1-1{
-    transition: transform 0.5s ease;
-}
 
-.img-school1-2{
-    display: none;
-    transition: transform 0.5s ease;
-    
-}
 
-.img-container1:hover .img-school1-1 {
-    transform: rotateY(180deg);
-}
-  
-.img-container1:hover .img-school1-2 {
-    transition: transform 0.5s ease;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-  }
 
 .etudes .school .school1 .school-text-1{
     padding-left: 5%;
@@ -459,7 +434,50 @@ a {
     transform: skewY(2deg);
   }
 
+.experiences .text{
+    position: relative;
+    padding: 2%;
+}
+
+.experiences .title{
+    position: relative;
+}
+
+
+
+
+
+
   /* CONTACT */
 .contact{
-    height: 80vh;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact .text{
+    position: relative;
+    padding: 2%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact .title{
+    align-self: flex-start;
+    padding-left: 2%;
+}
+
+.contact .logo{
+    background: #772D8B;
+    display: inline-flex;
+    flex-direction: row;
+    padding: 0.8%;
+    margin-top: 5%;
+}
+
+.img-logo{
+    padding: 0 10px;
 }
