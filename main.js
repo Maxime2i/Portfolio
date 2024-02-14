@@ -1,31 +1,43 @@
-import * as THREE from 'three';
-import { GLTFLoader } from 'GLTFLoader';
+import * as THREE from 'three'
+import { GLTFLoader } from 'GLTFLoader'
+import { FBXLoader } from 'FBXLoader'
 
-// Récupérer le canvas par son ID
 var canvas = document.getElementById('myCanvas');
-
-// Créez une scène
 var scene = new THREE.Scene();
-
-// Créez une caméra
 var camera = new THREE.PerspectiveCamera(75, canvas.width / canvas.height, 0.1, 1000);
-camera.position.z = 5;
-
-// Créez un moteur de rendu
+camera.position.x = 0.2;
+camera.position.y = 1.6;
+camera.position.z = 0.5;
 var renderer = new THREE.WebGLRenderer({ canvas: canvas });
 renderer.setSize(canvas.width, canvas.height);
-
-// Créez un chargeur GLTF
 var loader = new GLTFLoader();
 
-// Charger le fichier GLB
+// Chargement du modèle et de l'animation
 loader.load(
-    'img/avatar.glb',
+    '/img/avatar.glb',
     function (gltf) {
-        // Ajouter le modèle à la scène
-        scene.add(gltf.scene);
+        var model = gltf.scene;
+        scene.add(model);
 
-        // Appeler la fonction d'animation une fois le modèle chargé
+        // Création d'un mixer pour gérer l'animation
+        var mixer = new THREE.AnimationMixer(model);
+
+        // Récupération de l'animation depuis le fichier GLTF
+        var clips = gltf.animations;
+
+        // Ajout de l'animation au mixer
+        clips.forEach(function (clip) {
+            mixer.clipAction(clip).play();
+        });
+
+        // Fonction d'animation
+        function animate() {
+            requestAnimationFrame(animate);
+            mixer.update(0.0167); // Temps écoulé entre deux trames en secondes (60 FPS)
+            renderer.render(scene, camera);
+        }
+
+        // Appel de la fonction d'animation
         animate();
     },
     undefined,
@@ -33,21 +45,3 @@ loader.load(
         console.error(error);
     }
 );
-
-// Créez un cube
-var geometry = new THREE.BoxGeometry();
-var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-var cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
-
-// Fonction d'animation
-function animate() {
-    requestAnimationFrame(animate);
-
-    // Mettre à jour les animations ou interactions ici si nécessaire
-
-    renderer.render(scene, camera);
-}
-
-// Appeler la fonction d'animation pour démarrer le rendu de la scène
-animate();
