@@ -4,19 +4,24 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, target-densityDpi=device-dpi, minimal-ui' />
-    <title>Md Amiruddin</title>
-    <meta property="og:title" content="Md Amiruddin"/>
-    <meta name="description" content="Md Amiruddin 3D Portfolio"/>
-    <meta property="og:description" content="Md Amiruddin 3D Portfolio"/>
-    <meta property="og:url" content="https://mdamiruddin-3dportfolio.vercel.app"/>
-    <meta property="og:image" content="https://raw.githubusercontent.com/MdAmiruddin/mdamiruddin-3dportfolio/main/public/social/screenshot.png"/>
-    <meta name="twitter:card" content="summary"/>
-    <script type="module" src="/main.js"></script>
+    <title>Maxime Langlois</title>
+    
+  
     <link rel="stylesheet" href="style.css">
+
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "./node_modules/three/build/three.module.js",
+          }
+        }
+      </script>
+      <script type="module" src="./main.js"></script>
+
 
   </head>
   <body class="light-theme">
-
+    
     
 <section class="header">
     <div class="name"> 
@@ -49,7 +54,7 @@
 
     Aliquam eleifend, lectus quis congue dictum, purus erat sodales lectus, at ullamcorper felis ligula nec est. Maecenas gravida turpis eu augue vehicula feugiat. Curabitur tincidunt velit mi, et semper mauris fringilla sit amet. Pellentesque feugiat ornare odio eget lacinia. Duis porttitor ullamcorper vehicula. Vivamus vel leo tortor. Etiam ac iaculis risus. Suspendisse id diam lectus. Nunc risus velit, porttitor sed arcu eu, auctor elementum ligula. Sed lacinia, quam ac lobortis hendrerit, odio dui aliquet purus, in pulvinar eros ipsum quis velit.
     </div>
-    <div class="canvas">Canvas</div>
+    <canvas id="myCanvas" class="canvas" width="900" height="550"></canvas>
 </section>
 
 
@@ -62,10 +67,10 @@
 
         Aliquam eleifend, lectus quis congue dictum, purus erat sodales lectus, at ullamcorper felis ligula nec est. Maecenas gravida turpis eu augue vehicula feugiat. Curabitur tincidunt velit mi, et semper mauris fringilla sit amet. Pellentesque feugiat ornare odio eget lacinia. Duis porttitor ullamcorper vehicula. Vivamus vel leo tortor. Etiam ac iaculis risus. Suspendisse id diam lectus. Nunc risus velit, porttitor sed arcu eu, auctor elementum ligula. Sed lacinia, quam ac lobortis hendrerit, odio dui aliquet purus, in pulvinar eros ipsum quis velit.
         </div>
-        <img class="portfolio-projet-image" src="test.png" alt="portfolio-projet-image" width="300" height="300">
+        <img class="portfolio-projet-image" src="/img/test.png" alt="portfolio-projet-image" width="300" height="300">
     </div>
     <div class="ft_transcendance-projet">
-        <img class="ft_transcendance-projet-image" src="test.png" alt="ft_transcendance-projet-image" width="300" height="300">
+        <img class="ft_transcendance-projet-image" src="/img/test.png" alt="ft_transcendance-projet-image" width="300" height="300">
         <div class="ft_transcendance-projet-text">
         <h3>ft_transcendence</h3>
          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel lectus quis magna dapibus tempus. Praesent tristique dolor sit amet erat venenatis consectetur. Nulla vitae pharetra nunc. Aliquam porttitor imperdiet enim, ac commodo dui mattis eu. Vivamus tincidunt arcu quis malesuada cursus. Vivamus aliquam mi vitae purus consectetur fringilla. Nam a risus pretium, eleifend purus finibus, scelerisque risus. Nullam metus eros, sollicitudin non ante vitae, hendrerit pharetra lacus. Nunc metus nibh, sollicitudin et accumsan at, scelerisque vitae est. Nunc tempus pretium enim, id rhoncus urna interdum ut.
@@ -80,15 +85,15 @@
     <h2>Competences</h2>
     
     <div class="logo">
-        <div><a href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language"><img src="html.png" alt="html" width="100" height="100"></a></div>
-        <div><a href="https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade"><img src="css.png" alt="html" width="100" height="100"></a></div> 
-        <div><a href="https://fr.wikipedia.org/wiki/JavaScript"><img src="js.png" alt="html" width="100" height="100"></a></div> 
-        <div><a href="https://en.wikipedia.org/wiki/Three.js"><img src="three.png" alt="html" width="100" height="100"></a></div> 
-        <div><a href="https://fr.wikipedia.org/wiki/React"><img src="react.png" alt="html" width="100" height="100"></a></div> 
-        <div><a href="https://fr.wikipedia.org/wiki/C_(langage)"><img src="c.png" alt="html" width="100" height="100"></a></div> 
-        <div><a href="https://fr.wikipedia.org/wiki/C%2B%2B"><img src="c++.png" alt="html" width="100" height="100"></a></div>
-        <div><a href="https://fr.wikipedia.org/wiki/Git"><img src="git.png" alt="html" width="100" height="100"></a></div> 
-        <div><a href="https://fr.wikipedia.org/wiki/Linux"><img src="linux.jpg" alt="html" width="100" height="100"></a></div> 
+        <div><a href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language"><img src="/img/html.png" alt="html" width="100" height="100"></a></div>
+        <div><a href="https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade"><img src="/img/css.png" alt="html" width="100" height="100"></a></div> 
+        <div><a href="https://fr.wikipedia.org/wiki/JavaScript"><img src="/img/js.png" alt="html" width="100" height="100"></a></div> 
+        <div><a href="https://en.wikipedia.org/wiki/Three.js"><img src="/img/three.png" alt="html" width="100" height="100"></a></div> 
+        <div><a href="https://fr.wikipedia.org/wiki/React"><img src="/img/react.png" alt="html" width="100" height="100"></a></div> 
+        <div><a href="https://fr.wikipedia.org/wiki/C_(langage)"><img src="/img/c.png" alt="html" width="100" height="100"></a></div> 
+        <div><a href="https://fr.wikipedia.org/wiki/C%2B%2B"><img src="/img/c++.png" alt="html" width="100" height="100"></a></div>
+        <div><a href="https://fr.wikipedia.org/wiki/Git"><img src="/img/git.png" alt="html" width="100" height="100"></a></div> 
+        <div><a href="https://fr.wikipedia.org/wiki/Linux"><img src="/img/linux.jpg" alt="html" width="100" height="100"></a></div> 
     </div>
 
 
@@ -102,8 +107,8 @@
     <div class="school">
         <div class="school1">
             <div class="img-container1">
-                <img src="42lh.png" alt="42LeHavre" class="img-school1-1">
-                <img src="vue42.png" alt="vue42" class="img-school1-2">
+                <img src="/img/42lh.png" alt="42LeHavre" class="img-school1-1">
+                <img src="/img/vue42.png" alt="vue42" class="img-school1-2">
             </div>
             <div class="school-div1">
             <h3 class="school-title-1">42 Le Havre</h3>
@@ -116,14 +121,14 @@
                 <p class="school-text-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, molestias quibusdam eaque reprehenderit eligendi animi porro voluptatem sequi, voluptas non accusantium culpa, expedita repellendus odit. Delectus asperiores nihil temporibus excepturi?</p>
             </div>
             <div class="img-container2">
-                <img src="iut.jpg" alt="iut" class="img-school2-1">
-                <img src="vueiut.jpg" alt="vue iut" class="img-school2-2">
+                <img src="/img/iut.jpg" alt="iut" class="img-school2-1">
+                <img src="/img/vueiut.jpg" alt="vue iut" class="img-school2-2">
             </div>
         </div>
         <div class="school3">
             <div class="img-container3">
-                <img src="lycee.jpg" alt="lycee" class="img-school3-1">
-                <img src="vuelycee.jpg" alt="vue lycee" class="img-school3-2">
+                <img src="/img/lycee.jpg" alt="lycee" class="img-school3-1">
+                <img src="/img/vuelycee.jpg" alt="vue lycee" class="img-school3-2">
             </div>
             <div class="school-div3">
                 <h3 class="school-title-3">Lycee Jehan Ango</h3>
@@ -147,15 +152,16 @@
     <div class="text">
         <h2 class="title">Contact</h2>
         <div class="logo">
-            <div><a class="img-logo" href="mailto:maxime.lngls21@gmail.com"><img src="e-mail.png" alt="e-mail" width="50" height="50"></a></div> 
-            <div><a class="img-logo" href="https://wa.me/qr/I4Z35GGHL7SZA1"><img src="whatsapp.png" alt="whatsapp" width="50" height="50"></a></div> 
-            <div><a class="img-logo" href="https://www.linkedin.com/in/maxime-langlois-21-/"><img src="linkedin.png" alt="linkedin" width="50" height="50"></a></div> 
-            <div><a class="img-logo" href="https://github.com/Maxime2i"><img src="github.png" alt="github" width="50" height="50"></a></div>
+            <div><a class="img-logo" href="mailto:maxime.lngls21@gmail.com"><img src="/img/e-mail.png" alt="e-mail" width="50" height="50"></a></div> 
+            <div><a class="img-logo" href="https://wa.me/qr/I4Z35GGHL7SZA1"><img src="/img/whatsapp.png" alt="whatsapp" width="50" height="50"></a></div> 
+            <div><a class="img-logo" href="https://www.linkedin.com/in/maxime-langlois-21-/"><img src="/img/linkedin.png" alt="linkedin" width="50" height="50"></a></div> 
+            <div><a class="img-logo" href="https://github.com/Maxime2i"><img src="/img/github.png" alt="github" width="50" height="50"></a></div>
         </div>
     </div>
 </section>
 
 
  
+
   </body>
 </html>

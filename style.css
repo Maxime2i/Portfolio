@@ -126,9 +126,8 @@ a {
 /* CANVAS */
 .canvas{
     position: relative;
-    width: 40vw;
-    height: 50vh;
-    background-color: #5941A9;
+    margin-right: 3%;
+    border: 1px solid black;
 }
 
 
