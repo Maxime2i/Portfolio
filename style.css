@@ -22,25 +22,6 @@ a {
     height: 20vh;
     padding-bottom: 5%;
 }
-/*
-.name{
-    width: 20%;
-    height: 100%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    font-size: 2.5rem;
-}*/
-/*
-.prenom{
-    position: relative;
-    height: 50%;
-    margin-left: 40%;
-    padding: 10px;
-    top: 30%;
-    background-color: rgba(0, 0, 0, 0);
-}
-*/
 
 .name{
   text-transform: uppercase;
@@ -63,9 +44,8 @@ a {
   display: inline-block;
   font-size: 3em;
   animation: textclip 4s linear infinite;
+  margin: 2%;
 }
-
-
 
 @keyframes textclip {
     0% {
@@ -79,15 +59,6 @@ a {
     }
   }
 
-/*
-.nom{
-    position: relative;
-    height: 50%;
-    margin-left: 48%;
-    bottom: -7%;
-    background-color: rgba(0, 0, 0, 0);
-}
-*/
 .menu{
     background-color: black;
     width: 80%;
@@ -133,7 +104,17 @@ a {
     transform-origin: 0 50%;
   }
 
+.title {
+    position: relative;
+    transition: color .3s ease-in-out, background .3s ease-in-out;
+    background-image: linear-gradient(to right, #530b75 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+}
 
+.title:hover {
+    background-position: 0 0;
+}
 
 
 
@@ -182,9 +163,10 @@ a {
 }
 
 .apropos .title{
-    position: relative;
-    background-color: #7f7997;
+    width: 11%;
+    color: black;
 }
+
 
 /* CANVAS */
 .canvas{
@@ -197,18 +179,18 @@ a {
 
 
 
-
-
-
-
-
 /* PROJETS */
 .projets{
     padding-top: 10%;
     padding-left: 50px;
-    height: 180vh;
+    height: 140vh;
     display: flex;
     flex-direction: column;
+}
+
+.projets .title{
+    width: 4.5%;
+    color: white;
 }
 
 .portfolio-projet{
@@ -224,10 +206,13 @@ a {
 
 .portfolio-projet-text h3{
     font-size: 1.5rem;
+
+
 }
 
 .portfolio-projet-image{
     width: 30vw;
+    border: 1px solid white;
 }
 
 
@@ -254,6 +239,7 @@ a {
 
 .ft_transcendance-projet-image{
     width: 30vw;
+    border: 1px solid white;
 }
 
 
@@ -295,9 +281,15 @@ a {
     color: black;
 }
 
-.competences h2{
-    background-color: #7f7997;
-    padding-left: 2%;
+.competences .text{
+    position: relative;
+    width: 100vw;
+    padding: 2%;
+}
+
+.competences .title{
+    width: 8.5%;
+    color: black;
 }
 
 .competences:before {
@@ -374,22 +366,29 @@ a {
     height: 160vh;
     position: relative;
     padding: 50px 0;
+}
+
+.etudes .text2{
+    position: relative;
+    width: 100vw;
+    padding: 2%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.etudes .text{
+.etudes .text1{
     position: relative;
-    width: 60vw;
+    width: 100vw;
     padding: 2%;
-
 }
 
 .etudes .title{
-    align-self: flex-start;
-    padding-left: 2%;
+    width: 4.5%;
+    color: white;
 }
+
+
 
 .etudes .school{
     position: relative;
@@ -548,10 +547,6 @@ a {
     color: black;
 }
 
-.experiences h2{
-    background-color: #7f7997;
-}
-
 .experiences:before {
     content: '';
     width: 100%;
@@ -576,13 +571,16 @@ a {
     transform: skewY(2deg);
   }
 
+
 .experiences .text{
     position: relative;
+    width: 100vw;
     padding: 2%;
 }
 
 .experiences .title{
-    position: relative;
+    width: 7.5%;
+    color: black;
 }
 
 
@@ -593,23 +591,26 @@ a {
   /* CONTACT */
 .contact{
     height: 40vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.contact .text{
+.contact .text2{
     position: relative;
-    padding: 2%;
     width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.contact .text1{
+    position: relative;
+    width: 100vw;
+    
+}
+
 .contact .title{
-    align-self: flex-start;
-    padding-left: 2%;
+    width: 5%;
+    color: white;
+    margin: 4% 2%;
 }
 
 .contact .logo{
