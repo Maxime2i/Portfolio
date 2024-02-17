@@ -172,7 +172,7 @@ a {
 .canvas{
     position: relative;
     margin-right: 3%;
-    border: 1px solid black;
+    border: 1px solid white;
 }
 
 
@@ -214,7 +214,7 @@ a {
 
 .portfolio-projet-image{
     width: 30vw;
-    border: 1px solid white;
+    border: 1px solid black;
 }
 
 
@@ -241,7 +241,7 @@ a {
 
 .ft_transcendance-projet-image{
     width: 30vw;
-    border: 1px solid white;
+    border: 1px solid black;
 }
 
 

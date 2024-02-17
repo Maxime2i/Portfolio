@@ -10,50 +10,38 @@ camera.position.y = 1.65
 camera.position.z = 0.4
 var renderer = new THREE.WebGLRenderer({ canvas: canvas })
 renderer.setSize(canvas.width, canvas.height)
-const pointLight = new THREE.PointLight(0xffffff, 10)
+const pointLight = new THREE.PointLight(0xffffff, 50)
 
 pointLight.position.set(0, 5, 5)
 
 scene.add(pointLight)
 
 
-const loader = new GLTFLoader()
-let mixer
 
-loader.load('./img/avatar2.glb',
-  function (gltf) {
+const loader = new GLTFLoader();
+let avatar, neck, waist
 
-    const model = gltf.scene
-    const animations = gltf.animations
+loader.load('./img/av.glb', function (gltf) {
+    avatar = gltf.scene;
+    scene.add(avatar);
+/*
+    avatar.traverse(o => {
+        console.log(o.name);
+        if (o.name === 'Neck') { 
+          neck = o;
+        }
+        if (o.name === 'Spine') { 
+          waist = o;
+        }
+    })
+    */
+});
 
-    mixer = new THREE.AnimationMixer(model)
-    mixer.clipAction(animations[0]).play() 
-
-    scene.add(model)
-  })
 
 
-
-  const clock = new THREE.Clock()
-let lastElapsedTime = 0 
-
-
+// Démarrer l'animation
 function animate() {
-
-  renderer.render(scene, camera)
-
-
-  const elapsedTime = clock.getElapsedTime()
-  const deltaTime = elapsedTime - lastElapsedTime
-  lastElapsedTime = elapsedTime
-
-
-  if (mixer != undefined) {
-    mixer.update(deltaTime)
-  }
-
-  requestAnimationFrame(animate)
+  renderer.render(scene, camera);
+  requestAnimationFrame(animate);
 }
-animate()
-
-
+animate();
