@@ -141,8 +141,18 @@ a {
 }
 
 .apropos .title{
-    width: 11%;
     color: white;
+    display: inline-block;
+}
+
+.text-apropos {
+    width: 95%;
+    line-height: 150%;
+    font-size: 1.2rem;
+}
+
+.impt-apropos{
+    background: #530b75;
 }
 
 

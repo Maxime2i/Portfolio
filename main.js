@@ -7,7 +7,7 @@ camera.position.y = 1.65
 camera.position.z = 0.4
 var renderer = new THREE.WebGLRenderer({ canvas: canvas })
 renderer.setSize(canvas.width, canvas.height)
-const pointLight = new THREE.PointLight(0xffffff, 50)
+const pointLight = new THREE.PointLight(0xffffff, 10)
 
 pointLight.position.set(0, 5, 5)
 
