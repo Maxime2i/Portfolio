@@ -79,7 +79,44 @@ console.log(path)
       </section>`
       break;
     case '/etudes':
-      contentDiv.innerHTML = '<h2>School Page</h2>';
+      contentDiv.innerHTML = `
+      <section id="Etudes" class="etudes">
+          <div class="text1">
+          <h2 class="title">Etudes</h2>
+          <div class="text2">
+          <div class="school">
+              <div class="school1">
+                  <div class="img-container1">
+                      <img src="/img/42lh.png" alt="42LeHavre" class="img-school1-1">
+                      <img src="/img/vue42.png" alt="vue42" class="img-school1-2">
+                  </div>
+                  <div class="school-div1">
+                  <h3 class="school-title-1">42 Le Havre</h3>
+                  <p class="school-text-1">Lorem  voluptatem sequi, voluptas non accusantium culpa, expedita repellendus odit. Delectus asperiores nihil temporibus excepturi?</p>
+                  </div>
+              </div> 
+              <div class="school2">
+                  <div class="img-container2">
+                      <img src="/img/iut.jpg" alt="iut" class="img-school2-1">
+                      <img src="/img/vueiut.jpg" alt="vue iut" class="img-school2-2">
+                  </div>
+                  <div class="school-div2">
+                      <h3 class="school-title-2">IUT de Rouen</h3>
+                      <p class="school-text-2">orro voluptatem sequi, voluptas non accusantium culpa, expedita repellendus odit. Delectus asperiores nihil temporibus excepturi?</p>
+                  </div>
+              </div>
+              <div class="school3">
+                  <div class="img-container3">
+                      <img src="/img/lycee.jpg" alt="lycee" class="img-school3-1">
+                      <img src="/img/vuelycee.jpg" alt="vue lycee" class="img-school3-2">
+                  </div>
+                  <div class="school-div3">
+                      <h3 class="school-title-3">Lycee Jehan Ango</h3>
+                      <p class="school-text-3">o voluptatem sequi, voluptas non accusantium culpa, expedita repellendus odit. Delectus asperiores nihil temporibus excepturi?</p>
+                  </div>
+              </div>
+          </div>
+      </section>`
       break;
     case '/contact':
       contentDiv.innerHTML = '<h2>School Page</h2>';
