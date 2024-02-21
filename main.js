@@ -1,6 +1,3 @@
-import * as THREE from 'three'
-import { GLTFLoader } from 'GLTFLoader'
-import { FBXLoader } from 'FBXLoader'
 
 var canvas = document.getElementById('myCanvas')
 var scene = new THREE.Scene()
@@ -18,7 +15,7 @@ scene.add(pointLight)
 
 
 
-const loader = new GLTFLoader();
+const loader = new THREE.GLTFLoader();
 let avatar, neck, waist
 
 loader.load('./img/av.glb', function (gltf) {
