@@ -1,4 +1,41 @@
 
+
+
+
+
+
+
+// const intervalTime = 10; // temps en millisecondes entre chaque déplacement
+
+// function moveImage(element) {
+//     return function() {
+//         const step = 1 * element.direction;
+//         element.position += step;
+//         element.comp.style.left = element.position + 'px';
+//         if (element.position >= (window.innerWidth + 120) - element.comp.clientWidth) {
+//             element.direction = -1; // Changement de direction
+//         } else if (element.position <= 0) {
+//             element.direction = 1; // Changement de direction
+//         }
+//     };
+// }
+
+// // Définition de l'intervalle pour chaque élément
+// for (const element of elements) {
+//     setInterval(moveImage(element), intervalTime);
+// }
+
+
+
+
+
+
+
+
+
+
+
+/* CANVAS *//*
 var canvas = document.getElementById('myCanvas')
 var scene = new THREE.Scene()
 var camera = new THREE.PerspectiveCamera(75, canvas.width / canvas.height, 0.1, 1000)
@@ -21,24 +58,15 @@ let avatar, neck, waist
 loader.load('./img/av.glb', function (gltf) {
     avatar = gltf.scene;
     scene.add(avatar);
-/*
-    avatar.traverse(o => {
-        console.log(o.name);
-        if (o.name === 'Neck') { 
-          neck = o;
-        }
-        if (o.name === 'Spine') { 
-          waist = o;
-        }
-    })
-    */
+
 });
 
 
 
-// Démarrer l'animation
+// Start animation
 function animate() {
   renderer.render(scene, camera);
   requestAnimationFrame(animate);
 }
 animate();
+*/
