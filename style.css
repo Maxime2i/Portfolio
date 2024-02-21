@@ -283,88 +283,57 @@ a {
 
 
 
-
-
-
-
-
-/*
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ETUDES */
 
 .etudes{
-    height: 160vh;
+    width: 100%;
+    height: 100%;
     position: relative;
-    padding: 50px 0;
-    background: #7f7997;
-    color: black;
+    z-index: 5;
+    color: white;
+ 
 }
 
 .etudes .text2{
     position: relative;
-    width: 100vw;
-    padding: 2%;
+    width: 95%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 }
 
 .etudes .text1{
     position: relative;
     width: 100vw;
-    padding: 2%;
+    padding-left: 2%;
 }
 
 .etudes .title{
-    width: 4.5%;
-    color: black;
+    color: white;
+    display: inline-block;
 }
 
 
 
 .etudes .school{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.etudes .school .school1{
-    margin-right: 40%;
+  
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 50vw;
-    height: 40vh;
-    padding-bottom: 5%;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+/* SCHOOL 1 */
+
+.etudes .school .school1{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    height: 70vh;
 }
 
 .img-container1{
-    width: 90vw;
-    height: 40vh;
+    width: 20vw;
     transform-style: preserve-3d;
     transition: all 0.5s ease;
 }
@@ -375,15 +344,15 @@ a {
 
 .img-school1-1{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 20vw;
+    height: 30vh;
     backface-visibility: hidden;
 }
 
 .img-school1-2{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 20vw;
+    height: 30vh;
     backface-visibility: hidden;
     transform: rotateY(180deg);
 }
@@ -392,23 +361,20 @@ a {
     display: flex;
     flex-direction: column;
     padding-left: 5%;
+    margin-top: 30vh;
 }
 
-
+/* SCHOOL 2 */
 
 .etudes .school .school2{
-    margin-left: 40%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 50vw;
-    height: 40vh;
-    padding-bottom: 10%;
+    flex-direction: column;
+    width: 20vw;
+    height: 70vh;
 }
 
 .img-container2{
-    width: 90vw;
-    height: 40vh;
+    width: 20vw;
     transform-style: preserve-3d;
     transition: all 0.5s ease;
 }
@@ -419,37 +385,38 @@ a {
 
 .img-school2-1{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 20vw;
+    height: 30vh;
     backface-visibility: hidden;
+    margin-top: 30vh;
 }
 
 .img-school2-2{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 20vw;
+    height: 30vh;
     backface-visibility: hidden;
     transform: rotateY(180deg);
+    margin-top: 30vh;
 }
 
 .school-div2{
     display: flex;
     flex-direction: column;
-    padding-right: 5%;
+    padding-left: 5%
 }
 
+
+/* SCHOOL 3 */
 .etudes .school .school3{
-    margin-right: 40%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 50vw;
-    height: 40vh;
+    flex-direction: column;
+    width: 20vw;
+    height: 70vh;
 }
 
 .img-container3{
-    width: 90vw;
-    height: 40vh;
+    width: 20vw;
     transform-style: preserve-3d;
     transition: all 0.5s ease;
 }
@@ -460,15 +427,15 @@ a {
 
 .img-school3-1{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 20vw;
+    height: 30vh;
     backface-visibility: hidden;
 }
 
 .img-school3-2{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 20vw;
+    height: 30vh;
     backface-visibility: hidden;
     transform: rotateY(180deg);
 }
@@ -477,6 +444,7 @@ a {
     display: flex;
     flex-direction: column;
     padding-left: 5%;
+    margin-top: 30vh;
 }
 
 
