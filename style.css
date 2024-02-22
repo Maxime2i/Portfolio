@@ -135,7 +135,7 @@ a {
 
 .apropos .text{
     position: relative;
-    width: 60%;
+    width: 70%;
     height: 100%;
     padding: 2%;
 }
@@ -162,8 +162,8 @@ a {
     width: 600px;
     height: 450px;
     right: 0%;
-    bottom: -15%;
-    border: 1px solid purple;
+    bottom: -20%;
+    z-index: -1;
 }
 
 

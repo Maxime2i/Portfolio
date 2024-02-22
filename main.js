@@ -157,36 +157,36 @@ window.onpopstate = handleRouting;
 
 /* CANVAS */
 function loadCanvas(){
-  console.log('test1')
   var canvas = document.getElementById('myCanvas')
   var scene = new THREE.Scene()
   var camera = new THREE.PerspectiveCamera(75, canvas.width / canvas.height, 0.1, 1000)
   camera.position.x = 0
   camera.position.y = 1.65
-  camera.position.z = 5
+  camera.position.z = 0.4
   var renderer = new THREE.WebGLRenderer({ canvas: canvas })
   renderer.setSize(canvas.width, canvas.height)
   const pointLight = new THREE.PointLight(0xffffff, 10)
   
   pointLight.position.set(0, 5, 5)
   
-  const ambientLight = new THREE.AmbientLight(0xffffff, 500); // Couleur blanche, intensité 0.5
-  scene.add(ambientLight);
-
+  
 
   scene.add(pointLight)
   
   
   
   const loader = new THREE.GLTFLoader();
-  let avatar, neck, waist
+  let avatar
   
   loader.load('./img/av.glb', function (gltf) {
       avatar = gltf.scene;
       scene.add(avatar);
   
   });
-  console.log('test')
+  function animate() {
+    renderer.render(scene, camera);
+    requestAnimationFrame(animate);
+  }
+  animate();
 }
-
 
