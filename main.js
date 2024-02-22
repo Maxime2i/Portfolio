@@ -39,6 +39,8 @@ function handleRouting() {
   menuCompetences.classList.remove('anime')
   menuEtudes.classList.remove('anime')
   menuContact.classList.remove('anime')
+  document.querySelector('.menu').classList.remove('open');
+  document.querySelector('.btn-menu').classList.remove('open');
   switch(path) {
     case '':
       contentDiv.innerHTML = '<h2>Home Page</h2>';
