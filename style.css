@@ -162,7 +162,8 @@ a {
     width: 600px;
     height: 450px;
     right: 0%;
-    bottom: 30%;   
+    bottom: -15%;
+    border: 1px solid purple;
 }
 
 

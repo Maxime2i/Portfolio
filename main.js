@@ -14,14 +14,9 @@
 
 
 
-
-
-
-
 function handleRouting() {
   const path = window.location.hash.substring(1)
   const contentDiv = document.getElementById('content');
-console.log(path)
   switch(path) {
     case '':
       contentDiv.innerHTML = '<h2>Home Page</h2>';
@@ -37,6 +32,7 @@ console.log(path)
           </div>
           <canvas id="myCanvas" class="canvas" width="600px" height="450px"></canvas>
       </section>`
+      loadCanvas()
       break;
     case '/projets':
       contentDiv.innerHTML = `
@@ -119,7 +115,20 @@ console.log(path)
       </section>`
       break;
     case '/contact':
-      contentDiv.innerHTML = '<h2>School Page</h2>';
+      contentDiv.innerHTML = `
+      <section id="Contact" class="contact">
+          <div class="text1">
+              <h2 class="title">Contact</h2>
+              <div class="text2">
+              <div class="logo">
+                  <div><a class="img-logo" href="mailto:maxime.lngls21@gmail.com"><img src="/img/e-mail.png" alt="e-mail" width="50" height="50"></a></div> 
+                  <div><a class="img-logo" href="https://wa.me/qr/I4Z35GGHL7SZA1"><img src="/img/whatsapp.png" alt="whatsapp" width="50" height="50"></a></div> 
+                  <div><a class="img-logo" href="https://www.linkedin.com/in/maxime-langlois-21-/"><img src="/img/linkedin.png" alt="linkedin" width="50" height="50"></a></div> 
+                  <div><a class="img-logo" href="https://github.com/Maxime2i"><img src="/img/github.png" alt="github" width="50" height="50"></a></div>
+              </div>
+          </div>
+          </div>
+      </section>`
       break;
     default:
       contentDiv.innerHTML = '<h2>Page Not Found</h2>';
@@ -147,36 +156,37 @@ window.onpopstate = handleRouting;
 
 
 /* CANVAS */
-var canvas = document.getElementById('myCanvas')
-var scene = new THREE.Scene()
-var camera = new THREE.PerspectiveCamera(75, canvas.width / canvas.height, 0.1, 1000)
-camera.position.x = 0.15
-camera.position.y = 1.65
-camera.position.z = 0.4
-var renderer = new THREE.WebGLRenderer({ canvas: canvas })
-renderer.setSize(canvas.width, canvas.height)
-const pointLight = new THREE.PointLight(0xffffff, 10)
-
-pointLight.position.set(0, 5, 5)
-
-scene.add(pointLight)
-
-
-
-const loader = new THREE.GLTFLoader();
-let avatar, neck, waist
-
-loader.load('./img/av.glb', function (gltf) {
-    avatar = gltf.scene;
-    scene.add(avatar);
-
-});
+function loadCanvas(){
+  console.log('test1')
+  var canvas = document.getElementById('myCanvas')
+  var scene = new THREE.Scene()
+  var camera = new THREE.PerspectiveCamera(75, canvas.width / canvas.height, 0.1, 1000)
+  camera.position.x = 0
+  camera.position.y = 1.65
+  camera.position.z = 5
+  var renderer = new THREE.WebGLRenderer({ canvas: canvas })
+  renderer.setSize(canvas.width, canvas.height)
+  const pointLight = new THREE.PointLight(0xffffff, 10)
+  
+  pointLight.position.set(0, 5, 5)
+  
+  const ambientLight = new THREE.AmbientLight(0xffffff, 500); // Couleur blanche, intensité 0.5
+  scene.add(ambientLight);
 
 
-
-// Start animation
-function animate() {
-  renderer.render(scene, camera);
-  requestAnimationFrame(animate);
+  scene.add(pointLight)
+  
+  
+  
+  const loader = new THREE.GLTFLoader();
+  let avatar, neck, waist
+  
+  loader.load('./img/av.glb', function (gltf) {
+      avatar = gltf.scene;
+      scene.add(avatar);
+  
+  });
+  console.log('test')
 }
-animate();
+
+
