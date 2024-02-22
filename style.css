@@ -85,7 +85,7 @@ a {
     position: relative;
   }
 
-  .menu li::before{
+.menu li::before{
     content: "";
     width: 100%;
     height: 3px;
@@ -101,12 +101,40 @@ a {
     transform: scale3d(1,1,1);
   }
   .menu li::before{
-    background: #772D8B;
+    background: #530b75;
     transform-origin: 100% 50%;
   }
   .menu li:hover::before{
     transform-origin: 0 50%;
+  } 
+
+
+  
+
+  .m-apropos::before,
+  .m-projets::before,
+  .m-competences::before,
+  .m-etudes::before,
+  .m-contact::before{
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #530b75;
+    transform: scale3d(0,1,1);
+    transform-origin: 0 50%;
   }
+.m-apropos.anime::before,
+.m-projets.anime::before,
+.m-competences.anime::before,
+.m-etudes.anime::before,
+.m-contact.anime::before {
+    transform: scale3d(1,1,1); /* Lorsque la classe "anime" est ajoutée, l'animation est déclenchée */
+}
+ 
+
 
 .title {
     position: relative;

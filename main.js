@@ -8,20 +8,30 @@
 
 
 
+/* MENUS */
+
+const menuApropos = document.querySelector('.m-apropos')
+const menuProjets = document.querySelector('.m-projets')
+const menuCompetences = document.querySelector('.m-competences')
+const menuEtudes = document.querySelector('.m-etudes')
+const menuContact = document.querySelector('.m-contact') 
 
 
-
-
-
-
+/* ROUTES */
 function handleRouting() {
   const path = window.location.hash.substring(1)
   const contentDiv = document.getElementById('content');
+  menuApropos.classList.remove('anime')
+  menuProjets.classList.remove('anime')
+  menuCompetences.classList.remove('anime')
+  menuEtudes.classList.remove('anime')
+  menuContact.classList.remove('anime')
   switch(path) {
     case '':
       contentDiv.innerHTML = '<h2>Home Page</h2>';
       break;
     case '/apropos':
+      menuApropos.classList.add('anime')
       contentDiv.innerHTML = `
       <section id="Apropos" class="apropos">
           <div class="text">
@@ -35,6 +45,7 @@ function handleRouting() {
       loadCanvas()
       break;
     case '/projets':
+      menuProjets.classList.add('anime')
       contentDiv.innerHTML = `
       <section id="Projets" class="projets">
           <h2 class="title">Projets</h2>
@@ -55,6 +66,7 @@ function handleRouting() {
       </section>`
       break;
     case '/competences':
+      menuCompetences.classList.add('anime')
       contentDiv.innerHTML = `
       <section id="Competences" class="competences">
           <div class="text">
@@ -75,6 +87,7 @@ function handleRouting() {
       </section>`
       break;
     case '/etudes':
+      menuEtudes.classList.add('anime')
       contentDiv.innerHTML = `
       <section id="Etudes" class="etudes">
           <div class="text1">
@@ -115,6 +128,7 @@ function handleRouting() {
       </section>`
       break;
     case '/contact':
+      menuContact.classList.add('anime')
       contentDiv.innerHTML = `
       <section id="Contact" class="contact">
           <div class="text1">
