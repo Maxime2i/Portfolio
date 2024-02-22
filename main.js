@@ -10,6 +10,19 @@
 
 /* MENUS */
 
+const btnMenu = document.querySelector('.btn-menu')
+btnMenu.addEventListener('click', function() {
+    document.querySelector('.menu').classList.toggle('open');
+    document.querySelector('.btn-menu').classList.toggle('open');
+});
+
+const btnClose = document.querySelector('.btn-close')
+btnClose.addEventListener('click', function() {
+    document.querySelector('.menu').classList.remove('open');
+    document.querySelector('.btn-menu').classList.remove('open');
+
+});
+
 const menuApropos = document.querySelector('.m-apropos')
 const menuProjets = document.querySelector('.m-projets')
 const menuCompetences = document.querySelector('.m-competences')
