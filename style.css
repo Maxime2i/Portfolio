@@ -159,7 +159,7 @@ a {
 
 @media screen and (max-width: 480px) {
     .body{
-        overflow-x: scroll;
+        overflow-y: initial;
         height: auto;
     }
     .name{
@@ -255,13 +255,11 @@ a {
 @media screen and (max-width: 480px) {
     .apropos{
         height: auto;
-        overflow-x: scroll;
         padding: 0;
         display: flex;
         flex-direction: column;
     }
     .apropos .text{
-        overflow: hidden;
         margin: 0 5%;
         width: auto;
         height: auto;
@@ -385,7 +383,6 @@ a {
     .ft_transcendance-projet-image{
         width: 80%;
     }
-
 }
 
 
@@ -427,6 +424,36 @@ a {
     flex-direction: row;
     width: 92%;
     justify-content: space-evenly;
+}
+
+
+@media screen and (max-width: 480px) {
+    .competences{
+
+    }
+    
+    .competences .text{
+
+    }
+    
+    
+    .competences .logo{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .logo1,
+    .logo2,
+    .logo3,
+    .logo4,
+    .logo5,
+    .logo6,
+    .logo7,
+    .logo8,
+    .logo9{
+        margin: 10% 0;
+    }
 }
 
 
