@@ -159,7 +159,7 @@ a {
 
 @media screen and (max-width: 480px) {
     .body{
-        overflow-y: scroll;
+        overflow-x: scroll;
         height: auto;
     }
     .name{
@@ -255,7 +255,7 @@ a {
 @media screen and (max-width: 480px) {
     .apropos{
         height: auto;
-        overflow: hidden;
+        overflow-x: scroll;
         padding: 0;
         display: flex;
         flex-direction: column;
@@ -349,7 +349,44 @@ a {
 }
 
 
+@media screen and (max-width: 480px) {
+    .projets{
+        margin: 0%;
+    }
+    .portfolio-projet{
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20%;
+        margin: 0 5%;
+    }
+    .portfolio-projet-text{
+        width: 90%;
+        margin-bottom: 5%;
+    }
+    .portfolio-projet-image{
+        width: 80%;
+    }
+    .ft_transcendance-projet{
+        flex-direction: column-reverse;
+        width: auto;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20%;
+        margin: 0 5%;
+    }
+    .ft_transcendance-projet-text{
+        width: 90%;
+        margin-bottom: 5%;
+    }
+    .ft_transcendance-projet-image{
+        width: 80%;
+    }
 
+}
 
 
 
