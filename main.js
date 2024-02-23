@@ -1,13 +1,6 @@
 
 
 
-
-
-
-
-
-
-
 /* MENUS */
 
 const btnMenu = document.querySelector('.btn-menu')
@@ -55,7 +48,7 @@ function handleRouting() {
                   Bonjour ! Je m'appelle Maxime et je suis étudiant à l'école 42, passionné par le développement web. Fort de mes connaissances et de mon enthousiasme pour ce domaine, je suis <em class="impt-apropos">à la recherche d'un stage</em> enrichissant qui me permettra de mettre en pratique mes compétences et d'approfondir mes connaissances. Ma <em class="impt-apropos">formation à l'école 42</em> m'a permis d'acquérir une solide base en programmation et de développer des compétences en résolution de problèmes. Je suis motivé, créatif et toujours prêt à relever de nouveaux défis. Je suis convaincu que ce stage sera une opportunité parfaite pour moi de contribuer efficacement à votre équipe et de continuer à <em class="impt-apropos">apprendre et à évoluer</em> dans le domaine du développement web.
               </div>
           </div>
-          <canvas id="myCanvas" class="canvas" width="600px" height="450px"></canvas>
+          <canvas id="myCanvas" class="canvas"></canvas>
       </section>`
       loadCanvas()
       break;
