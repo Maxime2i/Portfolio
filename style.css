@@ -5,7 +5,6 @@ body{
     height: 100%;
     background-color: black;
     color: rgb(255, 255, 255);
-    overflow: hidden;
     font-family: "Montserrat", sans-serif;
   }
   
@@ -23,10 +22,7 @@ a {
     width: 100%;
     justify-content: space-between;
     height: 15%;
-    padding-bottom: 5%;
 }
-
-
 
 .name{
     width: 20%;
@@ -76,7 +72,6 @@ a {
 
   .menu ul{
     list-style-type: none;
-    overflow: hidden;
     margin: 0px;
     padding: 10px;
   }
@@ -159,7 +154,6 @@ a {
 
 @media screen and (max-width: 480px) {
     .body{
-        overflow-y: initial;
         height: auto;
     }
     .name{
@@ -177,7 +171,6 @@ a {
         line-height: 1.5;
         justify-content: center;
         z-index: 20;
-        overflow: hidden;
     }
     .menu.open{
         transform: translateX(0%);
@@ -281,7 +274,7 @@ a {
 
 /* PROJETS */
 .projets{
-    width: 100%;
+    width: 98%;
     height: 70%;
     position: relative;
     z-index: 5;
@@ -465,7 +458,7 @@ a {
 
 .etudes{
     width: 100%;
-    height: 100%;
+    height: 90%;
     position: relative;
     z-index: 5;
     color: white;
@@ -482,7 +475,7 @@ a {
 
 .etudes .text1{
     position: relative;
-    width: 100vw;
+    width: 98%;
     padding-left: 2%;
 }
 
@@ -581,7 +574,7 @@ a {
 .school-div2{
     display: flex;
     flex-direction: column;
-    padding-left: 5%
+    padding-right: 5%
 }
 
 
