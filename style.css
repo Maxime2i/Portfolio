@@ -9,12 +9,62 @@ body{
     overflow-x: hidden;
   }
   
-
-
 a {
     color: inherit;
     text-decoration: none;
 }
+
+
+.homePage{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.homePage-name{
+    width: auto;
+    height: auto;
+    text-transform: uppercase;
+    background-image: linear-gradient(
+    -225deg,
+    #8a2be2 0%,
+    #530b75 29%,
+    #9b30ff 67%,
+    #6a5acd 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 300% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  font-size: 5em;
+  animation: textclip 4s linear infinite;
+  margin: 2%;
+  margin-bottom: 10%;
+}
+
+.homePage-btn{
+    width: 20%;
+    height: 10%;
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 2px solid purple;
+    color: purple;
+}
+
+.homePage-btn:hover{
+    background: purple;
+    color: white;
+}
+
 
 /* HEADER */
 .header{
@@ -230,7 +280,15 @@ a {
       .cross.cross2 {
         transform: rotate(-45deg);
       }
-
+      .homePage{
+        height: 70vh;
+      }
+      .homePage-name{
+        margin-bottom: 40%;
+      }
+      .homePage-btn{
+        width: 70%;
+      }
  
 }
 
