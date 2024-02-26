@@ -1,5 +1,152 @@
 
 
+/* CANVAS */
+function loadCanvas(){
+    var canvas = document.getElementById('myCanvas')
+    canvas.width = window.innerWidth / 4
+    canvas.height = window.innerHeight / 2.5
+    var scene = new THREE.Scene()
+    var camera = new THREE.PerspectiveCamera(75, canvas.width / canvas.height, 0.1, 1000)
+    camera.position.x = 0
+    camera.position.y = 1.65
+    camera.position.z = 0.4
+    var renderer = new THREE.WebGLRenderer({ canvas: canvas })
+    renderer.setSize(canvas.width, canvas.height)
+    const pointLight = new THREE.PointLight(0xffffff, 5)
+    pointLight.position.set(0, 10, 10)
+    scene.add(pointLight)
+    
+    const loader = new THREE.GLTFLoader();
+    let avatar
+    let Neck
+    let RightEye
+    let LeftEye
+    
+    loader.load('./img/av.glb', function (gltf) {
+        avatar = gltf.scene
+        scene.add(avatar)
+        Neck = trouverElement(avatar, 'Neck')
+        RightEye = trouverElement(avatar, 'RightEye')
+        LeftEye = trouverElement(avatar, 'LeftEye')
+        const co = obtenirCoordonneesSouris()
+        gestionMouvementSouris({ clientX: co.x, clientY: co.y })
+    });
+    
+    
+    function animate() {
+      renderer.render(scene, camera);
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+
+
+
+  
+  
+  
+  function gestionMouvementSouris(event) {
+      const x = event.clientX
+      const y = event.clientY
+
+      if (Neck){
+        moveJoint(x, y, Neck, 25)
+        moveJoint(x, y, RightEye, 10)
+        moveJoint(x, y, LeftEye, 10)
+      }
+      
+  }
+  window.addEventListener('mousemove', gestionMouvementSouris);
+  
+
+function moveJoint(x, y, joint, degreeLimit) {
+    let degrees = getMouseDegrees(x, y, degreeLimit);
+    joint.rotation.y = THREE.Math.degToRad(degrees.x);
+    joint.rotation.x = THREE.Math.degToRad(degrees.y);
+}
+  
+  
+  
+function getMouseDegrees(x, y, degreeLimit) {
+    let dx = 0,
+        dy = 0,
+        xdiff,
+        xPercentage,
+        ydiff,
+        yPercentage;
+
+
+    let centreX = 0;
+    let centreY = 0;
+    const rect = canvas.getBoundingClientRect();
+    const positionX = rect.left + window.pageXOffset;
+    const positionY = rect.top + window.pageYOffset;
+
+    const largeurCanvas = rect.width;
+    const hauteurCanvas = rect.height;
+
+    centreX = positionX + (largeurCanvas / 2);
+    centreY = positionY + (hauteurCanvas / 2);
+
+    // Left (Rotates neck left between 0 and -degreeLimit)
+    
+    // 1. If cursor is in the left half of screen      x <= centreX
+    if (x <= centreX) {
+    // 2. Get the difference between middle of screen and cursor position      
+    xdiff = centreX - x;  
+    // 3. Find the percentage of that difference (percentage toward edge of screen)
+    xPercentage = (xdiff / (centreX)) * 100;
+    // 4. Convert that to a percentage of the maximum rotation we allow for the neck
+    dx = ((degreeLimit * xPercentage) / 100) * -1; }
+// Right (Rotates neck right between 0 and degreeLimit)
+    if (x >= centreX) {
+    xdiff = x - centreX;
+    xPercentage = (xdiff / (centreX)) * 100;
+    dx = (degreeLimit * xPercentage) / 100;
+    }
+    // Up (Rotates neck up between 0 and -degreeLimit)
+    if (y <= centreY) {
+    ydiff = centreY - y;
+    yPercentage = (ydiff / (centreY)) * 100;
+    // Note that I cut degreeLimit in half when she looks up
+    dy = (((degreeLimit * 0.5) * yPercentage) / 100) * -1;
+    }
+    
+    // Down (Rotates neck down between 0 and degreeLimit)
+    if (y >= centreY) {
+    ydiff = y - centreY;
+    yPercentage = (ydiff / (centreY)) * 100;
+    dy = (degreeLimit * yPercentage) / 100;
+    }
+    return { x: dx, y: dy };
+}
+}
+  
+  function trouverElement(parent, nomElement) {
+      let elementTrouve = null;
+      parent.traverse(function (child) {
+          if (child.name === nomElement) {
+              elementTrouve = child;
+          }
+      });
+      return elementTrouve;
+  }
+  
+  
+  function obtenirCoordonneesSouris() {
+      const coordonnees = { x: 0, y: 0 };
+  
+      window.addEventListener('mousemove', function(event) {
+          coordonnees.x = event.clientX;
+          coordonnees.y = event.clientY;
+      });
+  
+      return coordonnees;
+  }
+
+
+
+
 
 /* MENUS */
 let menuApropos 
@@ -198,10 +345,7 @@ function handleRouting() {
   
 }
 
-// Initial call to handle routing
 handleRouting();
-
-// Event listener for changes in URL
 window.onpopstate = handleRouting;
 
 
@@ -216,157 +360,3 @@ window.onpopstate = handleRouting;
 
 
   
-
-
-/* CANVAS */
-function loadCanvas(){
-  var canvas = document.getElementById('myCanvas')
-  console.log(canvas.width, canvas.height)
-  console.log(window.innerWidth, window.innerHeight)
-  canvas.width = window.innerWidth / 4
-  canvas.height = window.innerHeight / 2.5
-  var scene = new THREE.Scene()
-  var camera = new THREE.PerspectiveCamera(75, canvas.width / canvas.height, 0.1, 1000)
-  camera.position.x = 0
-  camera.position.y = 1.65
-  camera.position.z = 0.4
-  var renderer = new THREE.WebGLRenderer({ canvas: canvas })
-  renderer.setSize(canvas.width, canvas.height)
-  const pointLight = new THREE.PointLight(0xffffff, 5)
-  
-  pointLight.position.set(0, 10, 10)
-  
-
-  scene.add(pointLight)
-  
-  const loader = new THREE.GLTFLoader();
-  let avatar
-  let Neck
-  let RightEye
-  let LeftEye
-  
-  loader.load('./img/av.glb', function (gltf) {
-      avatar = gltf.scene
-      scene.add(avatar)
-      console.log(avatar)
-      Neck = trouverElement(avatar, 'Neck')
-      RightEye = trouverElement(avatar, 'RightEye')
-      LeftEye = trouverElement(avatar, 'LeftEye')
-  
-  });
-  function animate() {
-    renderer.render(scene, camera);
-    requestAnimationFrame(animate);
-  }
-  animate();
-
-
-
-
-
-
-
-function gestionMouvementSouris(event) {
-    const x = event.clientX
-    const y = event.clientY
-    
-    console.log("Position de la souris - X :", x, " Y :", y);
-
-
-
-    console.log('test', getMouseDegrees(x, y, 1))
-
-    moveJoint(x, y, Neck, 25)
-    moveJoint(x, y, RightEye, 10)
-    moveJoint(x, y, LeftEye, 10)
-
-
-}
-window.addEventListener('mousemove', gestionMouvementSouris);
-
- function moveJoint(x, y, joint, degreeLimit) {
-        let degrees = getMouseDegrees(x, y, degreeLimit);
-        joint.rotation.y = THREE.Math.degToRad(degrees.x);
-        joint.rotation.x = THREE.Math.degToRad(degrees.y);
-      }
-
-
-
-function getMouseDegrees(x, y, degreeLimit) {
-    let dx = 0,
-        dy = 0,
-        xdiff,
-        xPercentage,
-        ydiff,
-        yPercentage;
-  
-
-    let centreX = 0;
-    let centreY = 0;
-    const rect = canvas.getBoundingClientRect();
-    const positionX = rect.left + window.pageXOffset;
-    const positionY = rect.top + window.pageYOffset;
-
-    const largeurCanvas = rect.width;
-    const hauteurCanvas = rect.height;
-
-    centreX = positionX + (largeurCanvas / 2);
-    centreY = positionY + (hauteurCanvas / 2);
-  
-    // Left (Rotates neck left between 0 and -degreeLimit)
-    
-     // 1. If cursor is in the left half of screen      x <= centreX
-    if (x <= centreX) {
-      // 2. Get the difference between middle of screen and cursor position      
-      xdiff = centreX - x;  
-      // 3. Find the percentage of that difference (percentage toward edge of screen)
-      xPercentage = (xdiff / (centreX)) * 100;
-      // 4. Convert that to a percentage of the maximum rotation we allow for the neck
-      dx = ((degreeLimit * xPercentage) / 100) * -1; }
-  // Right (Rotates neck right between 0 and degreeLimit)
-    if (x >= centreX) {
-      xdiff = x - centreX;
-      xPercentage = (xdiff / (centreX)) * 100;
-      dx = (degreeLimit * xPercentage) / 100;
-    }
-    // Up (Rotates neck up between 0 and -degreeLimit)
-    if (y <= centreY) {
-      ydiff = centreY - y;
-      yPercentage = (ydiff / (centreY)) * 100;
-      // Note that I cut degreeLimit in half when she looks up
-      dy = (((degreeLimit * 0.5) * yPercentage) / 100) * -1;
-      }
-    
-    // Down (Rotates neck down between 0 and degreeLimit)
-    if (y >= centreY) {
-      ydiff = y - centreY;
-      yPercentage = (ydiff / (centreY)) * 100;
-      dy = (degreeLimit * yPercentage) / 100;
-    }
-    return { x: dx, y: dy };
-  }
-
-
-
-
-
-
-
-
-}
-
-function trouverElement(parent, nomElement) {
-    let elementTrouve = null;
-    parent.traverse(function (child) {
-        if (child.name === nomElement) {
-            elementTrouve = child;
-        }
-    });
-    return elementTrouve;
-}
-
-
-
-
-
-
