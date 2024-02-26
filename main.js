@@ -177,30 +177,30 @@ function handleRouting() {
   } else {
     headerDiv.innerHTML = `
     <header class="header">
-        <div class="name"> 
-            <div class="prenom">Maxime</div>
-            <div class="nom">Langlois</div>
-        </div>
-        <button class="btn-menu">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </button>
-        <div class="menu">
-            <ul>
-                <li class="close"><button class="btn-close">
-                <div class="cross cross1"></div>
-                <div class="cross cross2"></div>
-                </button></li>
-                <li ><a href="#/apropos" class="m-apropos">A propos</a></li>
-                <li><a href="#/projets" class="m-projets">Projets</a></li>
-                <li><a href="#/competences" class="m-competences">Competences</a></li>
-                <li><a href="#/etudes" class="m-etudes">Etudes</a></li>
-                <li><a href="#/contact" class="m-contact">Contact</a></li>
-                
-            </ul>
-        </div>
-    </header>`
+    <div class="name"> 
+        <div class="prenom">Maxime</div>
+        <div class="nom">Langlois</div>
+    </div>
+    <button class="btn-menu">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </button>
+    <div class="menu">
+        <ul>
+            <li class="close"><button class="btn-close">
+            <div class="cross cross1"></div>
+            <div class="cross cross2"></div>
+            </button></li>
+            <li ><a href="#/apropos" class="m-apropos">A propos</a></li>
+            <li><a href="#/projets" class="m-projets">Projets</a></li>
+            <li><a href="#/competences" class="m-competences">Competences</a></li>
+            <li><a href="#/etudes" class="m-etudes">Etudes</a></li>
+            <li><a href="#/contact" class="m-contact">Contact</a></li>
+            
+        </ul>
+    </div>
+</header>`
     menu()
     menuApropos.classList.remove('anime')
     menuProjets.classList.remove('anime')
@@ -311,18 +311,27 @@ function handleRouting() {
         menuContact.classList.add('anime')
         contentDiv.innerHTML = `
         <section id="Contact" class="contact">
-            <div class="text1">
-                <h2 class="title">Contact</h2>
-                <div class="text2">
-                <div class="logo">
-                    <div><a class="img-logo" href="mailto:maxime.lngls21@gmail.com"><img src="/img/e-mail.png" alt="e-mail" width="50" height="50"></a></div> 
-                    <div><a class="img-logo" href="https://wa.me/qr/I4Z35GGHL7SZA1"><img src="/img/whatsapp.png" alt="whatsapp" width="50" height="50"></a></div> 
-                    <div><a class="img-logo" href="https://www.linkedin.com/in/maxime-langlois-21-/"><img src="/img/linkedin.png" alt="linkedin" width="50" height="50"></a></div> 
-                    <div><a class="img-logo" href="https://github.com/Maxime2i"><img src="/img/github.png" alt="github" width="50" height="50"></a></div>
-                </div>
+        <div class="text1">
+            <h2 class="title">Contact</h2>
+            <div class="text2">
+            <div class="text3">
+            <div class="info">
+                <div>Me retourver :</div>
+                <div><a class="img-logo" href="mailto:maxime.lngls21@gmail.com"><img src="/img/e-mail.png" alt="e-mail" width="50" height="50"></a></div> 
+                <div><a class="img-logo" href="https://wa.me/qr/I4Z35GGHL7SZA1"><img src="/img/whatsapp.png" alt="whatsapp" width="50" height="50"></a></div> 
+                <div><a class="img-logo" href="https://www.linkedin.com/in/maxime-langlois-21-/"><img src="/img/linkedin.png" alt="linkedin" width="50" height="50"></a></div> 
+                <div><a class="img-logo" href="https://github.com/Maxime2i"><img src="/img/github.png" alt="github" width="50" height="50"></a></div>
             </div>
-            </div>
-        </section>`
+            <form class="message" id="messageForm">
+                <input type="text" class=" input input1" placeholder="Enter your Name">
+                <input type="email" class=" input input2" placeholder="Enter your email adress">
+                <textarea class=" input input3" placeholder="Enter your message"></textarea>
+                <Button class="btnSubmit" type="submit">Soumettre</Button>
+            </form>
+        </div>
+        </div>
+    </div>
+    </section>`
         break;
       default:
         contentDiv.innerHTML = '<h2>Page Not Found</h2>';
@@ -335,3 +344,23 @@ handleRouting();
 window.onpopstate = handleRouting;
 
 
+
+
+
+const form = document.getElementById('messageForm');
+
+        form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const name = document.querySelector('.input1').value;
+        const email = document.querySelector('.input2').value;
+        const message = document.querySelector('.input3').value;
+
+        // Afficher les valeurs dans la console
+        console.log('Nom:', name);
+        console.log('Email:', email);
+        console.log('Message:', message);
+
+        // Envoyer l'e-mail ici en utilisant une API ou un service tiers
+        // Cela dépendra de la méthode que vous souhaitez utiliser pour envoyer l'e-mail
+    });
