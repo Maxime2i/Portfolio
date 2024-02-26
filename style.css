@@ -331,8 +331,6 @@ a {
 /* CANVAS */
 .canvas{
     position: absolute;
-    width: 600px;
-    height: 450px;
     right: 0%;
     bottom: -20%;
     z-index: -1;
@@ -360,8 +358,6 @@ a {
         position: relative;
         transform: translate(-50%);
         left: 50%;
-        height: 20%;
-        width: 100%;
     }
 }
 
