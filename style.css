@@ -331,8 +331,8 @@ a {
 /* CANVAS */
 .canvas{
     position: absolute;
-    right: 0%;
-    bottom: -20%;
+    right: 5%;
+    bottom: -40%;
     z-index: -1;
 }
 
@@ -402,7 +402,7 @@ a {
 }
 
 .portfolio-projet-image{
-    width: 25vw;
+    width: 19vw;
     border: 2px solid #530b75;
 }
 
@@ -428,7 +428,7 @@ a {
 }
 
 .ft_transcendance-projet-image{
-    width: 25vw;
+    width: 19vw;
     border: 2px solid #530b75;
     margin-top: 2%;
     margin-right: 2%;
@@ -599,7 +599,7 @@ a {
 }
 
 .img-container1{
-    width: 20vw;
+    width: 18vw;
     transform-style: preserve-3d;
     transition: all 0.5s ease;
 }
@@ -610,14 +610,14 @@ a {
 
 .img-school1-1{
     position: absolute;
-    width: 20vw;
+    width: 18vw;
     height: 30vh;
     backface-visibility: hidden;
 }
 
 .img-school1-2{
     position: absolute;
-    width: 20vw;
+    width: 18vw;
     height: 30vh;
     backface-visibility: hidden;
     transform: rotateY(180deg);
@@ -635,7 +635,7 @@ a {
 .etudes .school .school2{
     display: flex;
     flex-direction: column;
-    width: 20vw;
+    width: 18vw;
     height: 70vh;
 }
 
@@ -651,7 +651,7 @@ a {
 
 .img-school2-1{
     position: absolute;
-    width: 20vw;
+    width: 18vw;
     height: 30vh;
     backface-visibility: hidden;
     margin-top: 30vh;
@@ -659,7 +659,7 @@ a {
 
 .img-school2-2{
     position: absolute;
-    width: 20vw;
+    width: 18vw;
     height: 30vh;
     backface-visibility: hidden;
     transform: rotateY(180deg);
@@ -677,12 +677,12 @@ a {
 .etudes .school .school3{
     display: flex;
     flex-direction: column;
-    width: 20vw;
+    width: 18vw;
     height: 70vh;
 }
 
 .img-container3{
-    width: 20vw;
+    width: 18vw;
     transform-style: preserve-3d;
     transition: all 0.5s ease;
 }
@@ -693,7 +693,7 @@ a {
 
 .img-school3-1{
     position: absolute;
-    width: 20vw;
+    width: 18vw;
     height: 30vh;
     backface-visibility: hidden;
 }

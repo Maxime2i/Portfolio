@@ -1,5 +1,3 @@
-
-
 /* CANVAS */
 function loadCanvas(){
     var canvas = document.getElementById('myCanvas')
@@ -12,8 +10,8 @@ function loadCanvas(){
     camera.position.z = 0.4
     var renderer = new THREE.WebGLRenderer({ canvas: canvas })
     renderer.setSize(canvas.width, canvas.height)
-    const pointLight = new THREE.PointLight(0xffffff, 5)
-    pointLight.position.set(0, 10, 10)
+    const pointLight = new THREE.PointLight(0xffffff, 2)
+    pointLight.position.set(0, 0, 15)
     scene.add(pointLight)
     
     const loader = new THREE.GLTFLoader();
@@ -22,7 +20,7 @@ function loadCanvas(){
     let RightEye
     let LeftEye
     
-    loader.load('./img/av.glb', function (gltf) {
+    loader.load('./img/avatar.glb', function (gltf) {
         avatar = gltf.scene
         scene.add(avatar)
         Neck = trouverElement(avatar, 'Neck')
@@ -38,10 +36,6 @@ function loadCanvas(){
       requestAnimationFrame(animate);
     }
     animate();
-
-
-
-
   
   
   
@@ -76,49 +70,40 @@ function getMouseDegrees(x, y, degreeLimit) {
         yPercentage;
 
 
-    let centreX = 0;
-    let centreY = 0;
-    const rect = canvas.getBoundingClientRect();
-    const positionX = rect.left + window.pageXOffset;
-    const positionY = rect.top + window.pageYOffset;
+    let centreX = 0
+    let centreY = 0
+    const rect = canvas.getBoundingClientRect()
+    const positionX = rect.left + window.pageXOffset
+    const positionY = rect.top + window.pageYOffset
 
-    const largeurCanvas = rect.width;
-    const hauteurCanvas = rect.height;
+    const largeurCanvas = rect.width
+    const hauteurCanvas = rect.height
 
-    centreX = positionX + (largeurCanvas / 2);
-    centreY = positionY + (hauteurCanvas / 2);
+    centreX = positionX + (largeurCanvas / 2)
+    centreY = positionY + (hauteurCanvas / 2)
 
-    // Left (Rotates neck left between 0 and -degreeLimit)
-    
-    // 1. If cursor is in the left half of screen      x <= centreX
-    if (x <= centreX) {
-    // 2. Get the difference between middle of screen and cursor position      
-    xdiff = centreX - x;  
-    // 3. Find the percentage of that difference (percentage toward edge of screen)
-    xPercentage = (xdiff / (centreX)) * 100;
-    // 4. Convert that to a percentage of the maximum rotation we allow for the neck
-    dx = ((degreeLimit * xPercentage) / 100) * -1; }
-// Right (Rotates neck right between 0 and degreeLimit)
+    if (x <= centreX) { 
+        xdiff = centreX - x
+        xPercentage = (xdiff / (centreX)) * 100
+        dx = ((degreeLimit * xPercentage) / 100) * -1
+}
     if (x >= centreX) {
-    xdiff = x - centreX;
-    xPercentage = (xdiff / (centreX)) * 100;
-    dx = (degreeLimit * xPercentage) / 100;
-    }
-    // Up (Rotates neck up between 0 and -degreeLimit)
+        xdiff = x - centreX;
+        xPercentage = (xdiff / (centreX)) * 100
+        dx = (degreeLimit * xPercentage) / 100
+}
     if (y <= centreY) {
-    ydiff = centreY - y;
-    yPercentage = (ydiff / (centreY)) * 100;
-    // Note that I cut degreeLimit in half when she looks up
-    dy = (((degreeLimit * 0.5) * yPercentage) / 100) * -1;
-    }
+        ydiff = centreY - y
+        yPercentage = (ydiff / (centreY)) * 100
+        dy = (((degreeLimit * 0.5) * yPercentage) / 100) * -1
+}
     
-    // Down (Rotates neck down between 0 and degreeLimit)
     if (y >= centreY) {
-    ydiff = y - centreY;
-    yPercentage = (ydiff / (centreY)) * 100;
-    dy = (degreeLimit * yPercentage) / 100;
-    }
-    return { x: dx, y: dy };
+        ydiff = y - centreY
+        yPercentage = (ydiff / (centreY)) * 100
+        dy = (degreeLimit * yPercentage) / 100
+}
+    return { x: dx, y: dy }
 }
 }
   
@@ -129,7 +114,7 @@ function getMouseDegrees(x, y, degreeLimit) {
               elementTrouve = child;
           }
       });
-      return elementTrouve;
+      return elementTrouve
   }
   
   
@@ -143,6 +128,7 @@ function getMouseDegrees(x, y, degreeLimit) {
   
       return coordonnees;
   }
+
 
 
 
@@ -349,14 +335,3 @@ handleRouting();
 window.onpopstate = handleRouting;
 
 
-
-
-
-
-
-
-
-
-
-
-  
