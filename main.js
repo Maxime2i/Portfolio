@@ -10,9 +10,9 @@ function loadCanvas(){
     camera.position.z = 0.4
     var renderer = new THREE.WebGLRenderer({ canvas: canvas })
     renderer.setSize(canvas.width, canvas.height)
-    const pointLight = new THREE.PointLight(0xffffff, 2)
-    pointLight.position.set(0, 0, 15)
-    scene.add(pointLight)
+
+    var ambientLight = new THREE.AmbientLight(0x404040, 3)
+    scene.add(ambientLight)
     
     const loader = new THREE.GLTFLoader();
     let avatar
@@ -169,6 +169,7 @@ function handleRouting() {
   const contentDiv = document.getElementById('content');
   const headerDiv = document.getElementById('header');
   if (path === ''){
+    headerDiv.innerHTML = ``
     contentDiv.innerHTML = `
     <section class="homePage">
         <div class="homePage-name">Maxime Langlois</div>
@@ -322,10 +323,10 @@ function handleRouting() {
                 <div><a class="img-logo" href="https://www.linkedin.com/in/maxime-langlois-21-/"><img src="/img/linkedin.png" alt="linkedin" width="50" height="50"></a></div> 
                 <div><a class="img-logo" href="https://github.com/Maxime2i"><img src="/img/github.png" alt="github" width="50" height="50"></a></div>
             </div>
-            <form class="message" id="messageForm">
-                <input type="text" class=" input input1" placeholder="Enter your Name">
-                <input type="email" class=" input input2" placeholder="Enter your email adress">
-                <textarea class=" input input3" placeholder="Enter your message"></textarea>
+            <form class="message" id="messageForm" action="https://formspree.io/f/xwkgbqzv" method="POST">
+                <input name="name" type="text" class=" input input1" placeholder="Enter your Name">
+                <input name="email" type="email" class=" input input2" placeholder="Enter your email adress">
+                <textarea name="message" class=" input input3" placeholder="Enter your message"></textarea>
                 <Button class="btnSubmit" type="submit">Soumettre</Button>
             </form>
         </div>
@@ -342,25 +343,3 @@ function handleRouting() {
 
 handleRouting();
 window.onpopstate = handleRouting;
-
-
-
-
-
-const form = document.getElementById('messageForm');
-
-        form.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const name = document.querySelector('.input1').value;
-        const email = document.querySelector('.input2').value;
-        const message = document.querySelector('.input3').value;
-
-        // Afficher les valeurs dans la console
-        console.log('Nom:', name);
-        console.log('Email:', email);
-        console.log('Message:', message);
-
-        // Envoyer l'e-mail ici en utilisant une API ou un service tiers
-        // Cela dépendra de la méthode que vous souhaitez utiliser pour envoyer l'e-mail
-    });
