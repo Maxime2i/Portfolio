@@ -282,7 +282,7 @@ function handleRouting() {
                     </div>
                     <div class="school-div1">
                     <h3 class="school-title-1">42 Le Havre</h3>
-                    <p class="school-text-1">Lorem  voluptatem sequi, voluptas non accusantium culpa, expedita repellendus odit. Delectus asperiores nihil temporibus excepturi?</p>
+                    <p class="school-text-1">C'est à la piscine de 42 que j'ai découvert la passion du code et où je me suis amusé pendant un mois à apprendre le plus possible le langage C. J'ai ensuite été sélectionné pour rejoindre la première promo au Havre où j'ai éffectue mon tronc commun et appris le C, C++, les machines virtuelles, les dockers et le web.</p>
                     </div>
                 </div> 
                 <div class="school2">
@@ -292,7 +292,7 @@ function handleRouting() {
                     </div>
                     <div class="school-div2">
                         <h3 class="school-title-2">IUT de Rouen</h3>
-                        <p class="school-text-2">orro voluptatem sequi, voluptas non accusantium culpa, expedita repellendus odit. Delectus asperiores nihil temporibus excepturi?</p>
+                        <p class="school-text-2">J'ai suivi 2 années de cours à l'IUT de Rouen (une année de DUT Genie Chimique Genie des Procédés et une année de BUT Mesure Physique), c'est ici que j'ai assisté pour la première fois à des cours d'informatiques en voyant les bases du C++.</p>
                     </div>
                 </div>
                 <div class="school3">
@@ -302,7 +302,7 @@ function handleRouting() {
                     </div>
                     <div class="school-div3">
                         <h3 class="school-title-3">Lycee Jehan Ango</h3>
-                        <p class="school-text-3">o voluptatem sequi, voluptas non accusantium culpa, expedita repellendus odit. Delectus asperiores nihil temporibus excepturi?</p>
+                        <p class="school-text-3">J'ai passé mon Baccaleureat Scientifique au lycée Jehan Ango ou j'ai fait de la seconde à la terminale, en apprenant notamment les mathématiques la physique et l'espagnol.</p>
                     </div>
                 </div>
             </div>

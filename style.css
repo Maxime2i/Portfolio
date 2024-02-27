@@ -380,8 +380,6 @@ a {
 
 
 
-
-
 /* PROJETS */
 .projets{
     width: 98%;
@@ -656,7 +654,7 @@ a {
 }
 
 .img-container2{
-    width: 20vw;
+    width: 18vw;
     transform-style: preserve-3d;
     transition: all 0.5s ease;
 }
@@ -716,7 +714,7 @@ a {
 
 .img-school3-2{
     position: absolute;
-    width: 20vw;
+    width: 18vw;
     height: 30vh;
     backface-visibility: hidden;
     transform: rotateY(180deg);
