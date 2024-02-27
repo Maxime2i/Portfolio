@@ -48,7 +48,6 @@ function loadCanvas(){
         moveJoint(x, y, RightEye, 10)
         moveJoint(x, y, LeftEye, 10)
       }
-      
   }
   window.addEventListener('mousemove', gestionMouvementSouris);
   
@@ -212,13 +211,14 @@ function handleRouting() {
     document.querySelector('.btn-menu').classList.remove('open');
     switch(path) {
       case '/apropos':
+        changeColor()
         menuApropos.classList.add('anime')
         contentDiv.innerHTML = `
         <section id="Apropos" class="apropos">
             <div class="text">
             <h2 class="title">A propos</h2>
                 <div class="text-apropos">
-                    Bonjour ! Je m'appelle Maxime et je suis étudiant à l'école 42, passionné par le développement web. Fort de mes connaissances et de mon enthousiasme pour ce domaine, je suis <em class="impt-apropos">à la recherche d'un stage</em> enrichissant qui me permettra de mettre en pratique mes compétences et d'approfondir mes connaissances. Ma <em class="impt-apropos">formation à l'école 42</em> m'a permis d'acquérir une solide base en programmation et de développer des compétences en résolution de problèmes. Je suis motivé, créatif et toujours prêt à relever de nouveaux défis. Je suis convaincu que ce stage sera une opportunité parfaite pour moi de contribuer efficacement à votre équipe et de continuer à <em class="impt-apropos">apprendre et à évoluer</em> dans le domaine du développement web.
+                    Bonjour ! Je m'appelle Maxime et je suis étudiant à l'école 42, passionné par le développement web. Fort de mes connaissances et de mon enthousiasme pour ce domaine, je suis <em class="impt-apropos">à la recherche d'un stage</em> enrichissant qui me permettra de mettre en pratique mes compétences et d'approfondir mes connaissances. Ma <em class="impt-apropos">formation à l'école 42</em> m'a permis d'acquérir une solide base en programmation et de développer des compétences en résolution de problèmes. Je suis motivé, créatif et toujours prêt à relever de nouveaux défis. Je suis convaincu que ce stage sera une opportunité parfaite pour moi de contribuer efficacement à votre équipe et de continuer à <em class="impt-apropos">apprendre et à évoluer</em> dans le domaine du développement web. Vous pouvez trouver mon CV traditionel <a class="CV" href="img/CV-Langlois-Maxime.pdf" download>ici</a>.
                 </div>
             </div>
             <canvas id="myCanvas" class="canvas" width="600px"></canvas>
@@ -345,3 +345,29 @@ function handleRouting() {
 
 handleRouting();
 window.onpopstate = handleRouting;
+
+
+
+function changeColor() {
+    console.log('test')
+    var animatedBackground = document.getElementById("transition");
+    
+    var Color = '#16041f'
+
+    gsap.to(animatedBackground, { 
+        duration: 1.5,
+        backgroundColor: Color,
+        height: "100%",
+        ease: "power1.inOut",
+        onComplete: function() {
+            
+            
+            // Ensuite, réinitialiser l'animation pour qu'elle puisse être réutilisée
+            gsap.to(animatedBackground, {
+                duration: 0,
+                backgroundColor: "#16041f", // Couleur de fond réinitialisée
+                height: 0, // Réinitialisation de la hauteur
+            });
+        }
+    });
+}
