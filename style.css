@@ -924,3 +924,44 @@ a {
     text-align: left; /* Aligner le texte du placeholder à gauche */
     vertical-align: top; /* Aligner verticalement le texte du placeholder en haut */
 }
+
+.meRetrouver{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 480px) {
+    .contact .text2{
+        height: 100vh;
+    }
+    
+    .contact .text3{
+        width: 90%;
+        height: 80%;
+        flex-direction: column;
+        border-radius: 4%;
+    }
+    
+    .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 90%;
+    }
+    
+    .logos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .message{
+        border-left: none;
+        border-top: 1px solid black;
+        padding: 0;
+    }
+    
+    .btnSubmit{
+        width: auto;
+    }
+}
