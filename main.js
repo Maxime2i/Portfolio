@@ -173,7 +173,7 @@ function handleRouting() {
     contentDiv.innerHTML = `
     <section class="homePage">
         <div class="homePage-name">Maxime Langlois</div>
-        <button class="homePage-btn"><a href="#/apropos">Me découvrir en 3 minutes</a></button>
+        <a href="#/apropos" class="homePage-a"><button class="homePage-btn">Me découvrir en 3 minutes</button></a>
     </section>`;
   } else {
     headerDiv.innerHTML = `

@@ -50,18 +50,34 @@ a {
   margin-bottom: 10%;
 }
 
-.homePage-btn{
+.homePage-a{
     width: 20%;
     height: 10%;
     background: none;
     padding: 0;
     margin: 0;
-    border: 2px solid purple;
-    color: purple;
+    border: 2px solid #530b75;
+    color: #530b75;
+}
+
+.homePage-a:hover{
+    background: #530b75;
+    color: white;
+}
+
+.homePage-btn{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: #530b75;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5em;
 }
 
 .homePage-btn:hover{
-    background: purple;
+    background: #530b75;
     color: white;
 }
 
