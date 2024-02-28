@@ -209,13 +209,12 @@ function handleRouting() {
     menuContact.classList.remove('anime')
     document.querySelector('.menu').classList.remove('open');
     document.querySelector('.btn-menu').classList.remove('open');
-    changeColor()
-    //changeHeightContent()
+    
     switch(path) {
       case '/apropos':
         
-        menuApropos.classList.add('anime')
-        contentDiv.innerHTML = `
+        menuApropos.classList.add('anime') 
+        changeColor(`
         <section id="Apropos" class="apropos">
             <div class="text">
             <h2 class="title">A propos</h2>
@@ -224,12 +223,11 @@ function handleRouting() {
                 </div>
             </div>
             <canvas id="myCanvas" class="canvas" width="600px"></canvas>
-        </section>`
-        loadCanvas()
+        </section>`, true)
         break;
       case '/projets':
         menuProjets.classList.add('anime')
-        contentDiv.innerHTML = `
+        changeColor(`
         <section id="Projets" class="projets">
             <h2 class="title">Projets</h2>
             <div class="portfolio-projet">
@@ -246,11 +244,11 @@ function handleRouting() {
                 Dans ce projet, nous avons eu le défi de créer une application Web SPA sur lequel vous pouvez jouer au célèbre jeu pong et interagir avec d'autres utilisateurs. Nous pouvions personnaliser le projet selon nos envies en choisissant nous-mêmes quels modules mous implémenterons. Donc nous avons decider de mettre en place un backend et un frontend. Le backend a ete fait à l'aide de Python Django, la base de données avec MySQL et le projet a été dockerise.
                 Pour ma part, j'ai été en charge de la partie frontend, et pour cela j'ai decider d'utiliser le framework React.js. J'ai aussi choisi d'implementer le jeu en 3D en utilisant le freamework Three.js, pour associer ces 2 frameworks j'ai utilise la librairie React-Three-Fiber.    </div>
             </div>
-        </section>`
+        </section>`, false)
         break;
       case '/competences':
         menuCompetences.classList.add('anime')
-        contentDiv.innerHTML = `
+        changeColor(`
         <section id="Competences" class="competences">
             <div class="text">
             <h2 class="title">Competences</h2>
@@ -267,11 +265,11 @@ function handleRouting() {
                 <div><a href="https://fr.wikipedia.org/wiki/Linux"><img src="/img/linux.jpg" alt="html" width="100" height="100" id="comp9" class="logo9"></a></div> 
             </div>
         </div>
-        </section>`
+        </section>`, false)
         break;
       case '/etudes':
         menuEtudes.classList.add('anime')
-        contentDiv.innerHTML = `
+        changeColor(`
         <section id="Etudes" class="etudes">
             <div class="text1">
             <h2 class="title">Etudes</h2>
@@ -308,11 +306,11 @@ function handleRouting() {
                     </div>
                 </div>
             </div>
-        </section>`
+        </section>`, false)
         break;
       case '/contact':
         menuContact.classList.add('anime')
-        contentDiv.innerHTML = `
+        changeColor(`
         <section id="Contact" class="contact">
         <div class="text1">
             <h2 class="title">Contact</h2>
@@ -336,7 +334,7 @@ function handleRouting() {
         </div>
         </div>
     </div>
-    </section>`
+    </section>`, false)
         break;
       default:
         contentDiv.innerHTML = '<h2>Page Not Found</h2>';
@@ -350,7 +348,7 @@ window.onpopstate = handleRouting;
 
 
 
-function changeColor() {
+function changeColor(contenu, isCanvas) {
     var animatedBackground = document.getElementById("transition");
     var content = document.getElementById("content");
 
@@ -365,17 +363,15 @@ function changeColor() {
         onComplete: function() {
             
             content.style.height = '0'
-            // var body = document.getElementById("body")
-            // body.style.background = "#16041f"
+            
             // Ensuite, réinitialiser l'animation pour qu'elle puisse être réutilisée
-            gsap.to(animatedBackground, {
-                duration: 0,
-                backgroundColor: "#16041f", // Couleur de fond réinitialisée
-                height: 0, // Réinitialisation de la hauteur
-                onComplete: function() {
+            animatedBackground.style.zIndex= "-1"
+                    content.innerHTML = contenu
+                    if (isCanvas)
+                        loadCanvas()
                     changeHeightContent()
-                }
-            });
+                
+           
         }
     });
 }
@@ -383,16 +379,21 @@ function changeColor() {
 function changeHeightContent() {
     var content = document.getElementById("content");
     var body = document.getElementById("body")
-   
+    var animatedBackground = document.getElementById("transition");
+    
     content.style.height = '0'
+
+   
 
     gsap.to(content, { 
         duration: 2,
         height: "100%",
         ease: "power1.inOut",
         onComplete: function(){
-             body.style.background = "black"
+            animatedBackground.style.zIndex = "12"
+            animatedBackground.style.height = "0" 
         }
+        
     });
 }
 
