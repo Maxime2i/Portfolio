@@ -45,8 +45,8 @@ function loadCanvas(){
 
       if (Neck){
         moveJoint(x, y, Neck, 25)
-        moveJoint(x, y, RightEye, 10)
-        moveJoint(x, y, LeftEye, 10)
+        moveJoint(x, y, RightEye, 15)
+        moveJoint(x, y, LeftEye, 15)
       }
   }
   window.addEventListener('mousemove', gestionMouvementSouris);
@@ -209,9 +209,11 @@ function handleRouting() {
     menuContact.classList.remove('anime')
     document.querySelector('.menu').classList.remove('open');
     document.querySelector('.btn-menu').classList.remove('open');
+    changeColor()
+    //changeHeightContent()
     switch(path) {
       case '/apropos':
-        changeColor()
+        
         menuApropos.classList.add('anime')
         contentDiv.innerHTML = `
         <section id="Apropos" class="apropos">
@@ -349,25 +351,48 @@ window.onpopstate = handleRouting;
 
 
 function changeColor() {
-    console.log('test')
     var animatedBackground = document.getElementById("transition");
-    
+    var content = document.getElementById("content");
+
     var Color = '#16041f'
+    var Color2 = 'black'
 
     gsap.to(animatedBackground, { 
-        duration: 1.5,
+        duration: 2,
         backgroundColor: Color,
         height: "100%",
         ease: "power1.inOut",
         onComplete: function() {
             
-            
+            content.style.height = '0'
+            var body = document.getElementById("body")
+            body.style.background = "#16041f"
             // Ensuite, réinitialiser l'animation pour qu'elle puisse être réutilisée
             gsap.to(animatedBackground, {
                 duration: 0,
                 backgroundColor: "#16041f", // Couleur de fond réinitialisée
                 height: 0, // Réinitialisation de la hauteur
+                onComplete: function() {
+                    changeHeightContent()
+                }
             });
         }
     });
 }
+
+function changeHeightContent() {
+    var content = document.getElementById("content");
+    var body = document.getElementById("body")
+   
+    content.style.height = '0'
+
+    gsap.to(content, { 
+        duration: 2,
+        height: "100%",
+        ease: "power1.inOut",
+        onComplete: function(){
+             body.style.background = "black"
+        }
+    });
+}
+
