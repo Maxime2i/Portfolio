@@ -26,8 +26,6 @@ function loadCanvas(){
         Neck = trouverElement(avatar, 'Neck')
         RightEye = trouverElement(avatar, 'RightEye')
         LeftEye = trouverElement(avatar, 'LeftEye')
-        const co = obtenirCoordonneesSouris()
-        gestionMouvementSouris({ clientX: co.x, clientY: co.y })
     });
     
     
@@ -68,18 +66,15 @@ function getMouseDegrees(x, y, degreeLimit) {
         ydiff,
         yPercentage;
 
-
-    let centreX = 0
-    let centreY = 0
-    const rect = canvas.getBoundingClientRect()
-    const positionX = rect.left + window.pageXOffset
-    const positionY = rect.top + window.pageYOffset
-
-    const largeurCanvas = rect.width
-    const hauteurCanvas = rect.height
-
-    centreX = positionX + (largeurCanvas / 2)
-    centreY = positionY + (hauteurCanvas / 2)
+        var rect = canvas.getBoundingClientRect();
+        var offsetX = rect.left + window.scrollX;
+        var offsetY = rect.top + window.scrollY;
+        
+        var canvasWidth = canvas.width;
+        var canvasHeight = canvas.height;
+        
+        var centreX = offsetX + canvasWidth / 2;
+        var centreY = offsetY - canvasHeight / 2;
 
     if (x <= centreX) { 
         xdiff = centreX - x
@@ -97,7 +92,7 @@ function getMouseDegrees(x, y, degreeLimit) {
         dy = (((degreeLimit * 0.5) * yPercentage) / 100) * -1
 }
     
-    if (y >= centreY) {
+    if (y >= centreY) {console.log('test')
         ydiff = y - centreY
         yPercentage = (ydiff / (centreY)) * 100
         dy = (degreeLimit * yPercentage) / 100
@@ -116,19 +111,6 @@ function getMouseDegrees(x, y, degreeLimit) {
       return elementTrouve
   }
   
-  
-  function obtenirCoordonneesSouris() {
-      const coordonnees = { x: 0, y: 0 };
-  
-      window.addEventListener('mousemove', function(event) {
-          coordonnees.x = event.clientX;
-          coordonnees.y = event.clientY;
-      });
-  
-      return coordonnees;
-  }
-
-
 
 
 
