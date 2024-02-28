@@ -176,14 +176,7 @@ function setMenu(){
         </ul>
     </div>
 </header>`
-    menu()
-    menuApropos.classList.remove('anime')
-    menuProjets.classList.remove('anime')
-    menuCompetences.classList.remove('anime')
-    menuEtudes.classList.remove('anime')
-    menuContact.classList.remove('anime')
-    document.querySelector('.menu').classList.remove('open');
-    document.querySelector('.btn-menu').classList.remove('open');
+    
     if (oneTime === 0){
         animMenu()
         oneTime++
@@ -209,10 +202,18 @@ function handleRouting() {
     </section>`;
   } else {
 
-
+    setMenu()
+    menu()
+    menuApropos.classList.remove('anime')
+    menuProjets.classList.remove('anime')
+    menuCompetences.classList.remove('anime')
+    menuEtudes.classList.remove('anime')
+    menuContact.classList.remove('anime')
+    document.querySelector('.menu').classList.remove('open');
+    document.querySelector('.btn-menu').classList.remove('open');
     switch(path) {
-      case '/apropos':setMenu()
-        //menuApropos.classList.add('anime') 
+      case '/apropos':
+        menuApropos.classList.add('anime') 
         changeColor(`
         <section id="Apropos" class="apropos">
             <div class="text">
@@ -225,7 +226,7 @@ function handleRouting() {
         </section>`, true)
         break;
       case '/projets':
-        //menuProjets.classList.add('anime')
+        menuProjets.classList.add('anime')
         changeColor(`
         <section id="Projets" class="projets">
             <h2 class="title">Projets</h2>
@@ -246,7 +247,7 @@ function handleRouting() {
         </section>`, false)
         break;
       case '/competences':
-        //menuCompetences.classList.add('anime')
+        menuCompetences.classList.add('anime')
         changeColor(`
         <section id="Competences" class="competences">
             <div class="text">
@@ -267,7 +268,7 @@ function handleRouting() {
         </section>`, false)
         break;
       case '/etudes':
-        //menuEtudes.classList.add('anime')
+        menuEtudes.classList.add('anime')
         changeColor(`
         <section id="Etudes" class="etudes">
             <div class="text1">
@@ -308,7 +309,7 @@ function handleRouting() {
         </section>`, false)
         break;
       case '/contact':
-        //menuContact.classList.add('anime')
+        menuContact.classList.add('anime')
         changeColor(`
         <section id="Contact" class="contact">
         <div class="text1">
