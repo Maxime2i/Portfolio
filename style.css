@@ -90,10 +90,10 @@ a {
     width: 100%;
     background-color: #16041f;
     position: absolute;
-    top: 15%;
+    top: 0;
     left: 0;
     height: 0;
-    z-index: 20;
+    z-index: 5;
 }
 
 /* HEADER */
@@ -130,6 +130,7 @@ a {
   font-size: 3em;
   animation: textclip 4s linear infinite;
   margin: 2%;
+  z-index: 10;
 }
 
 @keyframes textclip {
@@ -150,6 +151,7 @@ a {
     height: 100%;
     text-align: center;
     line-height: 10vh;
+    z-index: 10;
 }
 
   .menu ul{
@@ -271,6 +273,7 @@ a {
         background: none;
         border: none;
         transform: translate(-80%, 140%);
+        z-index: 10;
     }
     .line {
         width: 100%;
