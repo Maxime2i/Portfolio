@@ -100,12 +100,14 @@ a {
 
 /* HEADER */
 .header{
+    position: relative;
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
     height: 15%;
     background: #16041f;
+    left: -100%;
 }
 
 .name{
@@ -902,8 +904,8 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    background: #530b75;
-    width: 35%;
+    background: #35064b;
+    width: 40%;
     height: 80%;
     border-radius: 10%;
     

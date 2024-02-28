@@ -1,5 +1,5 @@
 /* CANVAS */
-function loadCanvas(){
+function loadCanvas(isLook){
     var canvas = document.getElementById('myCanvas')
     canvas.width = window.innerWidth / 4
     canvas.height = window.innerHeight / 2.5
@@ -28,16 +28,15 @@ function loadCanvas(){
         LeftEye = trouverElement(avatar, 'LeftEye')
     });
     
-    
     function animate() {
-      renderer.render(scene, camera);
-      requestAnimationFrame(animate);
+        renderer.render(scene, camera);
+        requestAnimationFrame(animate);
     }
     animate();
+    
   
-  
-  
-  function gestionMouvementSouris(event) {
+
+function gestionMouvementSouris(event) {
       const x = event.clientX
       const y = event.clientY
 
@@ -46,9 +45,11 @@ function loadCanvas(){
         moveJoint(x, y, RightEye, 15)
         moveJoint(x, y, LeftEye, 15)
       }
-  }
-  window.addEventListener('mousemove', gestionMouvementSouris);
-  
+    }  
+    window.addEventListener('mousemove', gestionMouvementSouris);
+
+
+
 
 function moveJoint(x, y, joint, degreeLimit) {
     let degrees = getMouseDegrees(x, y, degreeLimit);
@@ -92,7 +93,7 @@ function getMouseDegrees(x, y, degreeLimit) {
         dy = (((degreeLimit * 0.5) * yPercentage) / 100) * -1
 }
     
-    if (y >= centreY) {console.log('test')
+    if (y >= centreY) {
         ydiff = y - centreY
         yPercentage = (ydiff / (centreY)) * 100
         dy = (degreeLimit * yPercentage) / 100
@@ -111,6 +112,8 @@ function getMouseDegrees(x, y, degreeLimit) {
       return elementTrouve
   }
   
+
+
 
 
 
@@ -143,20 +146,10 @@ function menu(){
     menuContact = document.querySelector('.m-contact') 
 }
 
+let oneTime = 0
 
-/* ROUTES */
-function handleRouting() {
-  const path = window.location.hash.substring(1)
-  const contentDiv = document.getElementById('content');
-  const headerDiv = document.getElementById('header');
-  if (path === ''){
-    headerDiv.innerHTML = ``
-    contentDiv.innerHTML = `
-    <section class="homePage">
-        <div class="homePage-name">Maxime Langlois</div>
-        <a href="#/apropos" class="homePage-a"><button class="homePage-btn">Me découvrir en 3 minutes</button></a>
-    </section>`;
-  } else {
+function setMenu(){
+    const headerDiv = document.getElementById('header');
     headerDiv.innerHTML = `
     <header class="header">
     <div class="name"> 
@@ -191,11 +184,35 @@ function handleRouting() {
     menuContact.classList.remove('anime')
     document.querySelector('.menu').classList.remove('open');
     document.querySelector('.btn-menu').classList.remove('open');
+    if (oneTime === 0){
+        animMenu()
+        oneTime++
+    } else {
+        var header = document.querySelector('.header')
+        header.style.left = '0%'
+    }
     
+}
+
+
+/* ROUTES */
+function handleRouting() {
+  const path = window.location.hash.substring(1)
+  const contentDiv = document.getElementById('content');
+  const headerDiv = document.getElementById('header');
+  if (path === ''){
+    headerDiv.innerHTML = ``
+    contentDiv.innerHTML = `
+    <section class="homePage">
+        <div class="homePage-name">Maxime Langlois</div>
+        <a href="#/apropos" class="homePage-a"><button class="homePage-btn">Me découvrir en 3 minutes</button></a>
+    </section>`;
+  } else {
+
+
     switch(path) {
-      case '/apropos':
-        
-        menuApropos.classList.add('anime') 
+      case '/apropos':setMenu()
+        //menuApropos.classList.add('anime') 
         changeColor(`
         <section id="Apropos" class="apropos">
             <div class="text">
@@ -208,7 +225,7 @@ function handleRouting() {
         </section>`, true)
         break;
       case '/projets':
-        menuProjets.classList.add('anime')
+        //menuProjets.classList.add('anime')
         changeColor(`
         <section id="Projets" class="projets">
             <h2 class="title">Projets</h2>
@@ -229,7 +246,7 @@ function handleRouting() {
         </section>`, false)
         break;
       case '/competences':
-        menuCompetences.classList.add('anime')
+        //menuCompetences.classList.add('anime')
         changeColor(`
         <section id="Competences" class="competences">
             <div class="text">
@@ -250,7 +267,7 @@ function handleRouting() {
         </section>`, false)
         break;
       case '/etudes':
-        menuEtudes.classList.add('anime')
+        //menuEtudes.classList.add('anime')
         changeColor(`
         <section id="Etudes" class="etudes">
             <div class="text1">
@@ -291,7 +308,7 @@ function handleRouting() {
         </section>`, false)
         break;
       case '/contact':
-        menuContact.classList.add('anime')
+        //menuContact.classList.add('anime')
         changeColor(`
         <section id="Contact" class="contact">
         <div class="text1">
@@ -346,26 +363,22 @@ function changeColor(contenu, isCanvas) {
             
             content.style.height = '0'
             
-            // Ensuite, réinitialiser l'animation pour qu'elle puisse être réutilisée
             animatedBackground.style.zIndex= "-1"
                     content.innerHTML = contenu
                     if (isCanvas)
-                        loadCanvas()
-                    changeHeightContent()
+                        loadCanvas(false)
+                    changeHeightContent(isCanvas)
                 
            
         }
     });
 }
 
-function changeHeightContent() {
+function changeHeightContent(isCanvas) {
     var content = document.getElementById("content");
-    var body = document.getElementById("body")
     var animatedBackground = document.getElementById("transition");
     
     content.style.height = '0'
-
-   
 
     gsap.to(content, { 
         duration: 2,
@@ -374,8 +387,21 @@ function changeHeightContent() {
         onComplete: function(){
             animatedBackground.style.zIndex = "12"
             animatedBackground.style.height = "0" 
+            if (isCanvas)
+                loadCanvas(true)
         }
         
     });
 }
 
+
+function animMenu() {
+    var header = document.querySelector(".header");
+    
+    gsap.to(header, { 
+        duration: 2,
+        left: "0%",
+        ease: "power1.inOut",
+        
+    });
+}
