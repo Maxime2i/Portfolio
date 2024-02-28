@@ -365,8 +365,8 @@ function changeColor() {
         onComplete: function() {
             
             content.style.height = '0'
-            var body = document.getElementById("body")
-            body.style.background = "#16041f"
+            // var body = document.getElementById("body")
+            // body.style.background = "#16041f"
             // Ensuite, réinitialiser l'animation pour qu'elle puisse être réutilisée
             gsap.to(animatedBackground, {
                 duration: 0,
