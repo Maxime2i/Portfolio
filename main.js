@@ -194,7 +194,32 @@ function handleRouting() {
   const contentDiv = document.getElementById('content');
   const headerDiv = document.getElementById('header');
   if (path === ''){
-    headerDiv.innerHTML = ``
+    headerDiv.innerHTML = `
+    <header class="header">
+    <div class="name"> 
+        <div class="prenom">Maxime</div>
+        <div class="nom">Langlois</div>
+    </div>
+    <button class="btn-menu">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </button>
+    <div class="menu">
+        <ul>
+            <li class="close"><button class="btn-close">
+            <div class="cross cross1"></div>
+            <div class="cross cross2"></div>
+            </button></li>
+            <li ><a href="#/apropos" class="m-apropos">A propos</a></li>
+            <li><a href="#/projets" class="m-projets">Projets</a></li>
+            <li><a href="#/competences" class="m-competences">Competences</a></li>
+            <li><a href="#/etudes" class="m-etudes">Etudes</a></li>
+            <li><a href="#/contact" class="m-contact">Contact</a></li>
+            
+        </ul>
+    </div>
+</header>`
     contentDiv.innerHTML = `
     <section class="homePage">
         <div class="homePage-name">Maxime Langlois</div>
