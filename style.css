@@ -242,7 +242,7 @@ a {
 }
 
 @media screen and (max-width: 480px) {
-    .body{
+    html body{
         height: auto;
     }
     .content{
@@ -589,9 +589,6 @@ a {
 }
 
 
-html{
-    height: 100vh;
-}
 
 
 
@@ -599,10 +596,11 @@ html{
 
 .etudes{
     width: 100%;
-    height: auto;
+    height: 100%;
     position: relative;
     z-index: 5;
     color: white;
+
  
 }
 
@@ -619,18 +617,17 @@ html{
     position: relative;
     width: 95%;
     margin: 0 5%;
-    height: auto;
 }
 
 .etudes .title{
     color: white;
     display: inline-block;
-    height: 100%;
 }
 
 
 
 .etudes .school{
+  
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -863,8 +860,6 @@ html{
         margin: 1%;
     }
 }
-
-
 
 
 

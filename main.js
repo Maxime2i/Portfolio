@@ -331,6 +331,8 @@ function handleRouting() {
                     </div>
                 </div>
             </div>
+            </div>
+            </div>
         </section>`, false)
         break;
       case '/contact':
