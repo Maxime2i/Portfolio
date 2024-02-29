@@ -408,9 +408,13 @@ function changeHeightContent(isCanvas) {
     
     content.style.height = '0'
 
+    var taille = "100%"
+    if (window.innerWidth < 480)
+        taille = "200%"
+
     gsap.to(content, { 
         duration: 2,
-        height: "100%",
+        height: taille,
         ease: "power1.inOut",
         onComplete: function(){
             animatedBackground.style.zIndex = "12"

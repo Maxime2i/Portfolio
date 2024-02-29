@@ -242,7 +242,7 @@ a {
 }
 
 @media screen and (max-width: 480px) {
-    .body html{
+    body html{
         height: auto;
     }
     .content{
@@ -600,7 +600,7 @@ a {
 
 .etudes{
     width: 100%;
-    height: auto;
+    height: 50%;
     position: relative;
     z-index: 5;
     color: white;
