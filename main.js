@@ -384,7 +384,7 @@ function changeColor(contenu, isCanvas) {
     transition.addEventListener("animationend", function() {
         content.innerHTML = contenu
         if (isCanvas)
-            
+            loadCanvas()
         transition.classList.remove("active1");
         transition.style.height = "100%"
         transition.classList.add('active2')
