@@ -273,7 +273,7 @@ a {
         height: 100%;
     }
     .content{
-        overflow-y: initial;
+
     }
     .name{
         width: 100%;
@@ -286,7 +286,7 @@ a {
         position: absolute;
         background: #16041f;
         height: 100vh;
-        width: 40%;
+        width: auto;
         right: 0;
         line-height: 1.5;
         justify-content: center;
