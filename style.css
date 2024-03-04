@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     width: 100%;
-    height: auto;
+    height: 80vh;
     background-color: black;
     color: rgb(255, 255, 255);
     font-family: "Montserrat", sans-serif;
@@ -96,6 +96,33 @@ a {
     left: 0;
     height: 0;
     z-index: 12;
+    
+}
+
+.active1{
+    animation: animerDiv1 1.6s linear;
+}
+
+@keyframes animerDiv1 {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+.active2{
+    animation: animerDiv2 1.6s linear;
+}
+
+@keyframes animerDiv2 {
+    0% {
+        height: 100%;
+    }
+    100% {
+        height: 0;
+    }
 }
 
 /* HEADER */
@@ -242,12 +269,11 @@ a {
 }
 
 @media screen and (max-width: 480px) {
-    body html{
-        height: auto;
+    body{
+        height: 100%;
     }
     .content{
         overflow-y: initial;
-        height: auto;
     }
     .name{
         width: 100%;
@@ -405,6 +431,7 @@ a {
         position: relative;
         transform: translate(-50%);
         left: 50%;
+        display: none;
     }
 }
 

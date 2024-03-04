@@ -376,54 +376,23 @@ window.onpopstate = handleRouting;
 
 
 function changeColor(contenu, isCanvas) {
-    var animatedBackground = document.getElementById("transition");
-    var content = document.getElementById("content");
+    var transition = document.getElementById("transition")
+    var content = document.getElementById("content")
 
-    var Color = '#16041f'
-    var Color2 = 'black'
+    transition.classList.add('active1')
 
-    gsap.to(animatedBackground, { 
-        duration: 2,
-        backgroundColor: Color,
-        height: "100%",
-        ease: "power1.inOut",
-        onComplete: function() {
+    transition.addEventListener("animationend", function() {
+        content.innerHTML = contenu
+        if (isCanvas)
             
-            content.style.height = '0'
-            
-            animatedBackground.style.zIndex= "-1"
-                    content.innerHTML = contenu
-                    if (isCanvas)
-                        loadCanvas(false)
-                    changeHeightContent(isCanvas)
-                
-           
-        }
-    });
-}
-
-function changeHeightContent(isCanvas) {
-    var content = document.getElementById("content");
-    var animatedBackground = document.getElementById("transition");
-    
-    content.style.height = '0'
-
-    var taille = "100%"
-    if (window.innerWidth < 480)
-        taille = "200%"
-
-    gsap.to(content, { 
-        duration: 2,
-        height: taille,
-        ease: "power1.inOut",
-        onComplete: function(){
-            animatedBackground.style.zIndex = "12"
-            animatedBackground.style.height = "0" 
-            if (isCanvas)
-                loadCanvas(true)
-        }
-        
-    });
+        transition.classList.remove("active1");
+        transition.style.height = "100%"
+        transition.classList.add('active2')
+        transition.addEventListener("animationend", function() {
+            transition.classList.remove("active2");
+        }, { once: true });
+        transition.style.height = "0%"
+    }, { once: true });
 }
 
 
