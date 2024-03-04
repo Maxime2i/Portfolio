@@ -1,4 +1,5 @@
 /* CANVAS */
+
 function loadCanvas(isLook){
     var canvas = document.getElementById('myCanvas')
     canvas.width = window.innerWidth / 4
@@ -13,7 +14,7 @@ function loadCanvas(isLook){
 
     var ambientLight = new THREE.AmbientLight(0x404040, 3)
     scene.add(ambientLight)
-    
+
     const loader = new THREE.GLTFLoader();
     let avatar
     let Neck
@@ -167,16 +168,19 @@ function setMenu(){
             <div class="cross cross1"></div>
             <div class="cross cross2"></div>
             </button></li>
-            <li ><a href="#/apropos" class="m-apropos">A propos</a></li>
-            <li><a href="#/projets" class="m-projets">Projets</a></li>
-            <li><a href="#/competences" class="m-competences">Competences</a></li>
-            <li><a href="#/etudes" class="m-etudes">Etudes</a></li>
-            <li><a href="#/contact" class="m-contact">Contact</a></li>
+            <li class="m"><a href="#/apropos" class="m-apropos">A propos</a></li>
+            <li class="m"><a href="#/projets" class="m-projets">Projets</a></li>
+            <li class="m"><a href="#/competences" class="m-competences">Competences</a></li>
+            <li class="m"><a href="#/etudes" class="m-etudes">Etudes</a></li>
+            <li class="m"><a href="#/contact" class="m-contact">Contact</a></li>
+            <li class="optionBtn"><img onClick="changeTheme()" class="icon" src="img/brightness2.png" alt="Change Theme"></li>
+            <li class="optionBtn"><img class="icon" src="img/language2.png" alt="Change Language"></li> 
+                
             
         </ul>
     </div>
-</header>`
     
+</header>`
     if (oneTime === 0){
         animMenu()
         oneTime++
