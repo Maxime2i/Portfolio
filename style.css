@@ -205,7 +205,7 @@ a {
   .menu li{
     display: inline;
     list-style: none;
-    color: white;
+    color: var(--write);
     margin: 40px;
     position: relative;
     z-index: 13;

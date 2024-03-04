@@ -12,6 +12,9 @@
     <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/i18next@21.5.2/dist/umd/i18next.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.1/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
+
     
 
 
@@ -29,6 +32,8 @@
         document.documentElement.style.setProperty('--name4', '#1c0329')
         document.documentElement.style.setProperty('--lien', '#b053e6')
         document.documentElement.style.setProperty('--contact', '#6c2191')
+        document.getElementById('imgTheme').src = 'img/brightness.png'
+        document.getElementById('imgLanguage').src = 'img/language.png'
         theme = 1
       } else {
         document.documentElement.style.setProperty('--background', 'black')
@@ -40,8 +45,12 @@
         document.documentElement.style.setProperty('--name4', '#6a5acd')
         document.documentElement.style.setProperty('--lien', '#530b75')
         document.documentElement.style.setProperty('--contact', '#35064b')
+        document.getElementById('imgTheme').src = 'img/brightness2.png'
+        document.getElementById('imgLanguage').src = 'img/language2.png'
         theme = 0;
-}}
+    }
+}
+
            
   </script>
   <body id="body">

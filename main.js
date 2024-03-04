@@ -172,9 +172,9 @@ function setMenu(){
             <li class="m"><a href="#/projets" class="m-projets">Projets</a></li>
             <li class="m"><a href="#/competences" class="m-competences">Competences</a></li>
             <li class="m"><a href="#/etudes" class="m-etudes">Etudes</a></li>
-            <li class="m"><a href="#/contact" class="m-contact">Contact</a></li>
-            <li class="optionBtn"><img onClick="changeTheme()" class="icon" src="img/brightness2.png" alt="Change Theme"></li>
-            <li class="optionBtn"><img class="icon" src="img/language2.png" alt="Change Language"></li> 
+            <li class="m"><a href="#/contact" class="m-contact">Hello</a></li>
+            <li class="optionBtn"><img id="imgTheme" onClick="changeTheme()" class="icon" src="img/brightness2.png" alt="Change Theme"></li>
+            <li class="optionBtn"><img id="imgLanguage" onClick="translateTo('fr')"  class="icon" src="img/language2.png" alt="Change Language"></li> 
                 
             
         </ul>
@@ -190,6 +190,7 @@ function setMenu(){
     }
     
 }
+
 
 
 /* ROUTES */
