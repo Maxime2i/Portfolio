@@ -247,7 +247,7 @@ const aboutEN = `
     <div class="text">
     <h2 class="title">A propos</h2>
         <div class="text-apropos">
-            Bonjour ! Je m'appelle Maxime et je suis étudiant à l'école 42, passionné par le développement web. Fort de mes connaissances et de mon enthousiasme pour ce domaine, je suis <em class="impt-apropos">à la recherche d'un stage</em> enrichissant qui me permettra de mettre en pratique mes compétences et d'approfondir mes connaissances. Ma <em class="impt-apropos">formation à l'école 42</em> m'a permis d'acquérir une solide base en programmation et de développer des compétences en résolution de problèmes. Je suis motivé, créatif et toujours prêt à relever de nouveaux défis. Je suis convaincu que ce stage sera une opportunité parfaite pour moi de contribuer efficacement à votre équipe et de continuer à <em class="impt-apropos">apprendre et à évoluer</em> dans le domaine du développement web. Vous pouvez trouver mon CV traditionel <a class="CV" href="img/CV-Langlois-Maxime.pdf" download>ici</a>.
+            Hello ! My name is Maxime and I am a student at school 42, passionate about web development. With my knowledge and enthusiasm for this field, I am <em class="impt-apropos">looking for an enriching internship that will allow me to put my skills into practice and deepen my knowledge. My <em class="impt-apropos">training at École 42</em> allowed me to acquire a solid foundation in programming and to develop problem-solving skills. I am motivated, creative and always ready to take on new challenges. I am convinced that this internship will be a perfect opportunity for me to contribute effectively to your team and to continue to <em class="impt-apropos">learn and grow</em> in the field of web development. You can find my traditional CV <a class="CV" href="img/CV-Langlois-Maxime.pdf" download>here</a>.        </div>
         </div>
     </div>
     <canvas id="myCanvas" class="canvas" width="600px"></canvas>
@@ -276,17 +276,16 @@ const projectsEN = `
     <div class="portfolio-projet">
         <div class="portfolio-projet-text">
         <h3>Portfolio</h3>
-        À la fin de mon tronc commun a 42 Le Havre, j'ai reu mon premier portfolio pour tester mes connaissances en développement web frontend. J'ai donc réalisé celui-ci en utilisant HTML, CSS, Javascript et son freamework Three.js (pour ajouter mon avatar créée avec Ready-Player-Me). C'est un projet où j'ai pris plaisir à désigner et coder. J'ai également appris à coder en responsive pour que celui-ci soit accessible sur tous types d'écrans et a trouvé des moyens pour déployer des sites en lignes assez simplement, ici en utilisant Vercel.
-        </div>
+        At the end of my common core at 42 Le Havre, I received my first portfolio to test my knowledge in frontend web development. So I made this one using HTML, CSS, Javascript and its Three.js framework (to add my avatar created with Ready-Player-Me). This is a project where I enjoyed designing and coding. I also learned to code responsively so that it is accessible on all types of screens and found ways to deploy online sites quite simply, here using Vercel.        </div>
         <img class="portfolio-projet-image" src="/img/portfolio.png" alt="portfolio-projet-image" width="300" height="200">
     </div>
     <div class="ft_transcendance-projet">
         <img class="ft_transcendance-projet-image" src="/img/transcendence.png" alt="ft_transcendance-projet-image" width="300" height="200">
         <div class="ft_transcendance-projet-text">
         <h3>ft_transcendence</h3>
-        Dans ce projet, nous avons eu le défi de créer une application Web SPA sur lequel vous pouvez jouer au célèbre jeu pong et interagir avec d'autres utilisateurs. Nous pouvions personnaliser le projet selon nos envies en choisissant nous-mêmes quels modules mous implémenterons. Donc nous avons decider de mettre en place un backend et un frontend. Le backend a ete fait à l'aide de Python Django, la base de données avec MySQL et le projet a été dockerise.
-        Pour ma part, j'ai été en charge de la partie frontend, et pour cela j'ai decider d'utiliser le framework React.js. J'ai aussi choisi d'implementer le jeu en 3D en utilisant le freamework Three.js, pour associer ces 2 frameworks j'ai utilise la librairie React-Three-Fiber.    </div>
-    </div>
+        In this project we had the challenge of creating a SPA web application on which you can play the famous pong game and interact with other users. We could customize the project according to our wishes by choosing ourselves which soft modules we would implement. So we decided to set up a backend and a frontend. The backend was made using Python Django, the database with MySQL and the project was Dockerized.
+        For my part, I was in charge of the frontend part, and for this I decided to use the React.js framework. I also chose to implement the game in 3D using the Three.js framework, to combine these 2 frameworks I used the React-Three-Fiber library. </div>
+        </div>
 </section>`
 const skillsFR = `
 <section id="Competences" class="competences">
@@ -377,7 +376,7 @@ const schoolFR = `
             </div>
             <div class="school-div1">
             <h3 class="school-title-1">42 Le Havre</h3>
-            <p class="school-text-1">C'est à la piscine de 42 que j'ai découvert la passion du code et où je me suis amusé pendant un mois à apprendre le plus possible le langage C. J'ai ensuite été sélectionné pour rejoindre la première promo au Havre où j'ai éffectue mon tronc commun et appris le C, C++, les machines virtuelles, les dockers et le web.</p>
+            <p class="school-text-1">It was at the 42 swimming pool that I discovered my passion for coding and where I had fun for a month learning as much of the C language as possible. I was then selected to join the first class in Le Havre where I I completed my common core and learned C, C++, virtual machines, dockers and the web.</p>
             </div>
         </div> 
         <div class="school2">
@@ -387,7 +386,7 @@ const schoolFR = `
             </div>
             <div class="school-div2">
                 <h3 class="school-title-2">IUT de Rouen</h3>
-                <p class="school-text-2">J'ai suivi 2 années de cours à l'IUT de Rouen (une année de DUT Genie Chimique Genie des Procédés et une année de BUT Mesure Physique), c'est ici que j'ai assisté pour la première fois à des cours d'informatiques en voyant les bases du C++.</p>
+                <p class="school-text-2">I followed 2 years of courses at the IUT of Rouen (one year of DUT Chemical Engineering Process Engineering and one year of BUT Physical Measurement), it is here that I attended courses for the first time. computer science by seeing the basics of C++.</p>
             </div>
         </div>
         <div class="school3">
@@ -397,7 +396,7 @@ const schoolFR = `
             </div>
             <div class="school-div3">
                 <h3 class="school-title-3">Lycee Jehan Ango</h3>
-                <p class="school-text-3">J'ai passé mon Baccaleureat Scientifique au lycée Jehan Ango ou j'ai fait de la seconde à la terminale, en apprenant notamment les mathématiques la physique et l'espagnol.</p>
+                <p class="school-text-3">I passed my Scientific Baccalaureate at the Jehan Ango high school where I studied from second to final year, learning in particular mathematics, physics and Spanish.</p>
             </div>
         </div>
     </div>
@@ -420,9 +419,9 @@ const contactFR = `
     </div>
     </div>
     <form class="message" id="messageForm" action="https://formspree.io/f/xwkgbqzv" method="POST">
-        <input name="name" type="text" class=" input input1" placeholder="Enter your Name">
-        <input name="email" type="email" class=" input input2" placeholder="Enter your email adress">
-        <textarea name="message" class=" input input3" placeholder="Enter your message"></textarea>
+        <input name="name" type="text" class=" input input1" placeholder="Entrer votre nom">
+        <input name="email" type="email" class=" input input2" placeholder="Entrer votre adresse mail">
+        <textarea name="message" class=" input input3" placeholder="Entrer votre message"></textarea>
         <Button class="btnSubmit" type="submit">Soumettre</Button>
     </form>
 </div>
@@ -436,7 +435,7 @@ const contactEN = `
     <div class="text2">
     <div class="text3">
     <div class="info">
-        <div class="meRetrouver">Me retourver :</div>
+        <div class="meRetrouver">Find me :</div>
         <div class="logos">
         <div><a class="img-logo" href="mailto:maxime.lngls21@gmail.com"><img src="/img/e-mail.png" alt="e-mail" width="50" height="50"></a></div> 
         <div><a class="img-logo" href="https://wa.me/qr/I4Z35GGHL7SZA1"><img src="/img/whatsapp.png" alt="whatsapp" width="50" height="50"></a></div> 
@@ -448,7 +447,7 @@ const contactEN = `
         <input name="name" type="text" class=" input input1" placeholder="Enter your Name">
         <input name="email" type="email" class=" input input2" placeholder="Enter your email adress">
         <textarea name="message" class=" input input3" placeholder="Enter your message"></textarea>
-        <Button class="btnSubmit" type="submit">Soumettre</Button>
+        <Button class="btnSubmit" type="submit">Submit</Button>
     </form>
 </div>
 </div>
