@@ -253,7 +253,7 @@ a {
 .m-projets.anime::before,
 .m-competences.anime::before,
 .m-etudes.anime::before,
-.m-contact.anime::before {
+.m-contact.anime::before{
     transform: scale3d(1,1,1);
 }
 
@@ -281,6 +281,10 @@ a {
 }
 
 @media screen and (max-width: 480px) {
+    .icon{
+        width: 10%;
+        height: 10%;
+    }
     body{
         height: 100%;
     }
@@ -368,7 +372,6 @@ a {
       .homePage-a{
         width: 70%;
       }
- 
 }
 
 
@@ -400,7 +403,7 @@ a {
 .text-apropos {
     width: 95%;
     line-height: 150%;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-left: 5%;
 }
 

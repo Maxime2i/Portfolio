@@ -237,7 +237,15 @@ const aboutFR = `
     <div class="text">
     <h2 class="title">A propos</h2>
         <div class="text-apropos">
-            Bonjour ! Je m'appelle Maxime et je suis étudiant à l'école 42, passionné par le développement web. Fort de mes connaissances et de mon enthousiasme pour ce domaine, je suis <em class="impt-apropos">à la recherche d'un stage</em> enrichissant qui me permettra de mettre en pratique mes compétences et d'approfondir mes connaissances. Ma <em class="impt-apropos">formation à l'école 42</em> m'a permis d'acquérir une solide base en programmation et de développer des compétences en résolution de problèmes. Je suis motivé, créatif et toujours prêt à relever de nouveaux défis. Je suis convaincu que ce stage sera une opportunité parfaite pour moi de contribuer efficacement à votre équipe et de continuer à <em class="impt-apropos">apprendre et à évoluer</em> dans le domaine du développement web. Vous pouvez trouver mon CV traditionel <a class="CV" href="img/CV-Langlois-Maxime.pdf" download>ici</a>.
+        Bonjour et bienvenue sur mon portfolio. Je suis Maxime Langlois, âgé de 21 ans et originaire de Normandie.<br><br>
+
+        Ma passion pour l’informatique et les sciences m'a conduit à suivre un cursus en sciences au lycée. Après l'obtention de mon baccalauréat, j'ai poursuivi mes études à l'IUT de Rouen, où j'ai principalement étudié les sciences pendant deux ans. En quête de ma voie, j'ai participé à <em class="impt-apropos">la piscine de l’école 42 en Mars 2023</em>, une expérience qui a révélé ma passion pour la programmation. Ainsi, j'ai entamé mon tronc commun à 42 Le Havre. Actuellement, je suis à la recherche d'un <em class="impt-apropos">stage dans le développement web</em> pour finaliser ce parcours.<br><br>
+        
+        Au cours de ce tronc commun, j'ai approfondi mes connaissances en développement et découvert de nouvelles technologies, notamment le C et le C++, ainsi que le développement web avec HTML, CSS et JavaScript. J'ai participé à <em class="impt-apropos">plusieurs projets d'équipe</em> qui m'ont permis de mettre en pratique mes compétences et de les enrichir. À l'avenir, j'ai l'intention de me spécialiser davantage dans le développement web.<br><br>
+        
+        Pour en savoir plus sur mes compétences, mes projets et pour me contacter, n'hésitez pas à explorer ce site et à me donner vos retours. Vous pouvez consulter mon CV en cliquant sur le lien suivant: <a class="CV" href="img/CV-Langlois-Maxime.pdf" download>Accéder au CV</a>.<br><br>
+        
+        Bonne lecture et à bientôt.<br>
         </div>
     </div>
     <canvas id="myCanvas" class="canvas" width="600px"></canvas>
@@ -247,7 +255,15 @@ const aboutEN = `
     <div class="text">
     <h2 class="title">A propos</h2>
         <div class="text-apropos">
-            Hello ! My name is Maxime and I am a student at school 42, passionate about web development. With my knowledge and enthusiasm for this field, I am <em class="impt-apropos">looking for an enriching internship that will allow me to put my skills into practice and deepen my knowledge. My <em class="impt-apropos">training at École 42</em> allowed me to acquire a solid foundation in programming and to develop problem-solving skills. I am motivated, creative and always ready to take on new challenges. I am convinced that this internship will be a perfect opportunity for me to contribute effectively to your team and to continue to <em class="impt-apropos">learn and grow</em> in the field of web development. You can find my traditional CV <a class="CV" href="img/CV-Langlois-Maxime.pdf" download>here</a>.        </div>
+        Hello and welcome to my portfolio. My name is Maxime Langlois, I am 21 years old, and I am from Normandy.<br><br>
+
+        Being passionate about computer science and sciences for many years, I naturally pursued a Scientific Baccalaureate in high school. After obtaining my baccalaureate, I joined the IUT of Rouen, where I mainly studied sciences for 2 years. Then, seeking my path, in March 2023, I attended <em class="impt-apropos">the piscine of the school 42</em> which revealed my passion for coding. Thus, I started my common core at 42 Le Havre. I am currently looking for an <em class="impt-apropos">internship in web development</em> to complete this journey.<br><br>
+        
+        During this common core, I deepened my knowledge in development and discovered new technologies, primarily C and C++, as well as web development with HTML, CSS, and JavaScript. I participated in <em class="impt-apropos">several team projects</em> that allowed me to apply and enrich my skills. Later on, I plan to specialize further in web development.<br><br>
+        
+        If you want to know more about me, my skills, and my various projects, or simply how to contact me, feel free to explore this site and give me feedback. You can view my CV by clicking on the following link: <a class="CV" href="img/CV-Langlois-Maxime.pdf" download> Access the CV</a>.<br><br>
+        
+        Happy reading and see you soon.<br>
         </div>
     </div>
     <canvas id="myCanvas" class="canvas" width="600px"></canvas>
@@ -258,7 +274,7 @@ const projectsFR = `
     <div class="portfolio-projet">
         <div class="portfolio-projet-text">
         <h3>Portfolio</h3>
-        À la fin de mon tronc commun a 42 Le Havre, j'ai reu mon premier portfolio pour tester mes connaissances en développement web frontend. J'ai donc réalisé celui-ci en utilisant HTML, CSS, Javascript et son freamework Three.js (pour ajouter mon avatar créée avec Ready-Player-Me). C'est un projet où j'ai pris plaisir à désigner et coder. J'ai également appris à coder en responsive pour que celui-ci soit accessible sur tous types d'écrans et a trouvé des moyens pour déployer des sites en lignes assez simplement, ici en utilisant Vercel.
+        À la conclusion de mon tronc commun à 42 Le Havre, j'ai créer mon premier portfolio afin de mettre à l'épreuve mes compétences en développement web frontend. Pour ce faire, j'ai utilisé <em class="impt-apropos">HTML, CSS, JavaScript</em> ainsi que le framework <em class="impt-apropos">Three.js</em> (pour intégrer mon avatar créé avec Ready-Player-Me). Ce projet m'a offert une expérience enrichissante où j'ai pris plaisir à concevoir et à coder. De plus, j'ai acquis des compétences en matière de conception responsive afin de garantir l'accessibilité de mon portfolio sur tous les types d'écrans. J'ai également découvert des outils facilitant le déploiement de sites web en ligne, tels que Vercel.
         </div>
         <img class="portfolio-projet-image" src="/img/portfolio.png" alt="portfolio-projet-image" width="300" height="200">
     </div>
@@ -276,7 +292,7 @@ const projectsEN = `
     <div class="portfolio-projet">
         <div class="portfolio-projet-text">
         <h3>Portfolio</h3>
-        At the end of my common core at 42 Le Havre, I received my first portfolio to test my knowledge in frontend web development. So I made this one using HTML, CSS, Javascript and its Three.js framework (to add my avatar created with Ready-Player-Me). This is a project where I enjoyed designing and coding. I also learned to code responsively so that it is accessible on all types of screens and found ways to deploy online sites quite simply, here using Vercel.        </div>
+        At the conclusion of my core curriculum at 42 Le Havre, I created my first portfolio to put my frontend web development skills to the test. To accomplish this, I utilized <em class="impt-apropos">HTML, CSS, JavaScript</em> and the <em class="impt-apropos">Three.js</em> framework (to integrate my avatar created with Ready-Player-Me). This project provided me with a rewarding experience where I enjoyed both designing and coding. Additionally, I gained skills in responsive design to ensure accessibility of my portfolio across all screen types. I also discovered tools that facilitate online website deployment, such as Vercel.
         <img class="portfolio-projet-image" src="/img/portfolio.png" alt="portfolio-projet-image" width="300" height="200">
     </div>
     <div class="ft_transcendance-projet">
