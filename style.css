@@ -282,8 +282,8 @@ a {
 
 @media screen and (max-width: 480px) {
     .icon{
-        width: 10%;
-        height: 10%;
+        width: 30%;
+        height: 30%;
     }
     body{
         height: 100%;
