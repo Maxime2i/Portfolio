@@ -181,10 +181,10 @@ const headerFR = `<header class="header">
             <div class="cross cross1"></div>
             <div class="cross cross2"></div>
             </button></li>
-            <li class="m"><a href="#/apropos" class="m-apropos">A propos</a></li>
-            <li class="m"><a href="#/projets" class="m-projets">Projets</a></li>
-            <li class="m"><a href="#/competences" class="m-competences">Competences</a></li>
-            <li class="m"><a href="#/etudes" class="m-etudes">Etudes</a></li>
+            <li class="m"><a href="#/about" class="m-apropos">A propos</a></li>
+            <li class="m"><a href="#/projects" class="m-projets">Projets</a></li>
+            <li class="m"><a href="#/skills" class="m-competences">Competences</a></li>
+            <li class="m"><a href="#/studies" class="m-etudes">Etudes</a></li>
             <li class="m"><a href="#/contact" class="m-contact">Contact</a></li>
             <li class="optionBtn"><img id="imgTheme" class="icon m-contact" src="img/brightness2.png" alt="Change Theme"></li>
             <li class="optionBtn"><img id="imgLanguage" class="icon m-contact" src="img/language2.png" alt="Change Language"></li> 
@@ -210,10 +210,10 @@ const headerEN = `<header class="header">
         <div class="cross cross1"></div>
         <div class="cross cross2"></div>
         </button></li>
-        <li class="m"><a href="#/apropos" class="m-apropos">About</a></li>
-        <li class="m"><a href="#/projets" class="m-projets">Projects</a></li>
-        <li class="m"><a href="#/competences" class="m-competences">Skills</a></li>
-        <li class="m"><a href="#/etudes" class="m-etudes">Studies</a></li>
+        <li class="m"><a href="#/about" class="m-apropos">About</a></li>
+        <li class="m"><a href="#/projects" class="m-projets">Projects</a></li>
+        <li class="m"><a href="#/skills" class="m-competences">Skills</a></li>
+        <li class="m"><a href="#/studies" class="m-etudes">Studies</a></li>
         <li class="m"><a href="#/contact" class="m-contact">Contact</a></li>
         <li class="optionBtn"><img id="imgTheme" class="icon m-contact" src="img/brightness2.png" alt="Change Theme"></li>
         <li class="optionBtn"><img id="imgLanguage" class="icon m-contact" src="img/language2.png" alt="Change Language"></li> 
@@ -225,12 +225,12 @@ const headerEN = `<header class="header">
 const homePageFR = `
 <section class="homePage">
     <div class="homePage-name">Maxime Langlois</div>
-    <a href="#/apropos" class="homePage-a"><button class="homePage-btn">Me découvrir</button></a>
+    <a href="#/about" class="homePage-a"><button class="homePage-btn">Me découvrir</button></a>
 </section>`
 const homePageEN = `
 <section class="homePage">
     <div class="homePage-name">Maxime Langlois</div>
-    <a href="#/apropos" class="homePage-a"><button class="homePage-btn">Discover me</button></a>
+    <a href="#/about" class="homePage-a"><button class="homePage-btn">Discover me</button></a>
 </section>`
 const aboutFR = `
 <section id="Apropos" class="apropos">
@@ -554,28 +554,28 @@ function handleRouting() {
     document.querySelector('.menu').classList.remove('open');
     document.querySelector('.btn-menu').classList.remove('open');
     switch(path) {
-      case '/apropos':
+      case '/about':
         menuApropos.classList.add('anime') 
         if (language === 0)
             changeColor(aboutFR, true)
         else
             changeColor(aboutEN, true)
         break;
-      case '/projets':
+      case '/projects':
         menuProjets.classList.add('anime')
         if (language === 0)
             changeColor(projectsFR, false)
         else
             changeColor(projectsEN, false)
         break;
-      case '/competences':
+      case '/skills':
         menuCompetences.classList.add('anime')
         if (language === 0)
             changeColor(skillsFR, false)
         else
             changeColor(skillsEN, false)
         break;
-      case '/etudes':
+      case '/studies':
         menuEtudes.classList.add('anime')
         if (language === 0)
             changeColor(schoolFR, false)
