@@ -537,6 +537,7 @@ function setMenu(){
 /* ROUTES */
 function handleRouting() {
   const path = window.location.hash.substring(1)
+  console.log('new routes  ', path)
   const contentDiv = document.getElementById('content');
   const headerDiv = document.getElementById('header');
   if (path === ''){
@@ -618,6 +619,17 @@ window.onpopstate = handleRouting;
 function changeColor(contenu, isCanvas) {
     var transition = document.getElementById("transition")
     var content = document.getElementById("content")
+    var lien1 = document.querySelector('.m-apropos')
+    var lien2 = document.querySelector('.m-projets')
+    var lien3 = document.querySelector('.m-competences')
+    var lien4 = document.querySelector('.m-etudes')
+    var lien5 = document.querySelector('.m-contact')
+
+    lien1.style.pointerEvents = 'none'
+    lien2.style.pointerEvents = 'none'
+    lien3.style.pointerEvents = 'none'
+    lien4.style.pointerEvents = 'none'
+    lien5.style.pointerEvents = 'none'
 
     transition.classList.add('active1')
 
@@ -630,6 +642,11 @@ function changeColor(contenu, isCanvas) {
         transition.classList.add('active2')
         transition.addEventListener("animationend", function() {
             transition.classList.remove("active2");
+            lien1.style.pointerEvents = 'auto'
+            lien2.style.pointerEvents = 'auto'
+            lien3.style.pointerEvents = 'auto'
+            lien4.style.pointerEvents = 'auto'
+            lien5.style.pointerEvents = 'auto'
         }, { once: true });
         transition.style.height = "0%"
     }, { once: true });
