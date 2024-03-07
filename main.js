@@ -428,7 +428,7 @@ const contactFR = `
     <div class="text2">
     <div class="text3">
     <div class="info">
-        <div class="meRetrouver">Me retourver :</div>
+        <div class="meRetrouver">Me contacter :</div>
         <div class="logos">
         <div><a class="img-logo" href="mailto:maxime.lngls21@gmail.com"><img src="/img/e-mail.png" alt="e-mail" width="50" height="50"></a></div> 
         <div><a class="img-logo" href="https://wa.me/qr/I4Z35GGHL7SZA1"><img src="/img/whatsapp.png" alt="whatsapp" width="50" height="50"></a></div> 
@@ -453,7 +453,7 @@ const contactEN = `
     <div class="text2">
     <div class="text3">
     <div class="info">
-        <div class="meRetrouver">Find me :</div>
+        <div class="meRetrouver">Contact me :</div>
         <div class="logos">
         <div><a class="img-logo" href="mailto:maxime.lngls21@gmail.com"><img src="/img/e-mail.png" alt="e-mail" width="50" height="50"></a></div> 
         <div><a class="img-logo" href="https://wa.me/qr/I4Z35GGHL7SZA1"><img src="/img/whatsapp.png" alt="whatsapp" width="50" height="50"></a></div> 
