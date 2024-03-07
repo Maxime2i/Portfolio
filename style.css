@@ -551,7 +551,7 @@ a {
         margin-bottom: 5%;
     }
     .portfolio-projet-image{
-        width: 80%;
+        width: 100%;
     }
     .ft_transcendance-projet{
         flex-direction: column-reverse;
@@ -567,7 +567,7 @@ a {
         margin-bottom: 5%;
     }
     .ft_transcendance-projet-image{
-        width: 80%;
+        width: 100%;
     }
 }
 
