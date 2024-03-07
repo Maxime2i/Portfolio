@@ -477,30 +477,14 @@ const contactEN = `
 let theme = 0
 function changeTheme() {
       if (theme === 0){
-        document.documentElement.style.setProperty('--background', 'inherit')
+        document.documentElement.style.setProperty('--background', '#f5f5f5')
         document.documentElement.style.setProperty('--write', 'black')
-        document.documentElement.style.setProperty('--menu', '#6c2191')
-        document.documentElement.style.setProperty('--name1', '#3a1e4a')
-        document.documentElement.style.setProperty('--name2', '#291236')
-        document.documentElement.style.setProperty('--name3', '#240733')
-        document.documentElement.style.setProperty('--name4', '#1c0329')
-        document.documentElement.style.setProperty('--lien', '#b053e6')
         document.documentElement.style.setProperty('--contact', '#6c2191')
-        document.getElementById('imgTheme').style.filter = "invert(1)"
-        document.getElementById('imgLanguage').style.filter = "invert(1)"
         theme = 1
       } else {
         document.documentElement.style.setProperty('--background', 'black')
         document.documentElement.style.setProperty('--write', 'white')
-        document.documentElement.style.setProperty('--menu', '#16041f')
-        document.documentElement.style.setProperty('--name1', '#8a2be2')
-        document.documentElement.style.setProperty('--name2', '#530b75')
-        document.documentElement.style.setProperty('--name3', '#9b30ff')
-        document.documentElement.style.setProperty('--name4', '#6a5acd')
-        document.documentElement.style.setProperty('--lien', '#530b75')
         document.documentElement.style.setProperty('--contact', '#35064b')
-        document.getElementById('imgTheme').style.filter = "invert(0)"
-        document.getElementById('imgLanguage').style.filter = "invert(0)"
         theme = 0;
     }
 }
@@ -537,7 +521,6 @@ function setMenu(){
 /* ROUTES */
 function handleRouting() {
   const path = window.location.hash.substring(1)
-  console.log('new routes  ', path)
   const contentDiv = document.getElementById('content');
   const headerDiv = document.getElementById('header');
   if (path === ''){
