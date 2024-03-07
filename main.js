@@ -249,6 +249,7 @@ const aboutFR = `
         </div>
     </div>
     <canvas id="myCanvas" class="canvas" width="600px"></canvas>
+    <img class="profilPicture" src="img/me.png" alt="profil picture">
 </section>`
 const aboutEN = `
 <section id="Apropos" class="apropos">
@@ -482,7 +483,6 @@ function translateTo(){
     else 
         language = 0
     handleRouting()
-  
   }
 
 function setMenu(){
@@ -520,6 +520,7 @@ function handleRouting() {
         contentDiv.innerHTML =  homePageFR
     else
         contentDiv.innerHTML =  homePageEN
+    document.querySelector('.menu').classList.add('invisible')
   } else {
 
     setMenu()
@@ -605,11 +606,13 @@ function changeColor(contenu, isCanvas) {
 
 function animMenu() {
     var header = document.querySelector(".header");
-    
+    document.querySelector('.menu').classList.add('invisible')
     gsap.to(header, { 
         duration: 2,
         left: "0%",
         ease: "power1.inOut",
-        
+        onComplete: function(){
+            document.querySelector('.menu').classList.remove('invisible')
+        },
     });
 }
