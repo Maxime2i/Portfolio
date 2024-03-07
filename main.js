@@ -225,12 +225,12 @@ const headerEN = `<header class="header">
 const homePageFR = `
 <section class="homePage">
     <div class="homePage-name">Maxime Langlois</div>
-    <a href="#/apropos" class="homePage-a"><button class="homePage-btn">Me découvrir en 3 minutes</button></a>
+    <a href="#/apropos" class="homePage-a"><button class="homePage-btn">Me découvrir</button></a>
 </section>`
 const homePageEN = `
 <section class="homePage">
     <div class="homePage-name">Maxime Langlois</div>
-    <a href="#/apropos" class="homePage-a"><button class="homePage-btn">Discover me in 3 minutes</button></a>
+    <a href="#/apropos" class="homePage-a"><button class="homePage-btn">Discover me</button></a>
 </section>`
 const aboutFR = `
 <section id="Apropos" class="apropos">
