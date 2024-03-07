@@ -239,9 +239,9 @@ const aboutFR = `
         <div class="text-apropos">
         Bonjour et bienvenue sur mon portfolio. Je suis Maxime Langlois, âgé de 21 ans et originaire de Normandie.<br><br>
 
-        Ma passion pour l’informatique et les sciences m'a conduit à suivre un cursus en sciences au lycée. Après l'obtention de mon baccalauréat, j'ai poursuivi mes études à l'IUT de Rouen, où j'ai principalement étudié les sciences pendant deux ans. En quête de ma voie, j'ai participé à <em class="impt-apropos">la piscine de l’école 42 en Mars 2023</em>, une expérience qui a révélé ma passion pour la programmation. Ainsi, j'ai entamé mon tronc commun à 42 Le Havre. Actuellement, je suis à la recherche d'un <em class="impt-apropos">stage dans le développement web</em> pour finaliser ce parcours.<br><br>
+        Ma passion pour l’informatique et les sciences m'a conduit à suivre un cursus en sciences au lycée. Après l'obtention de mon baccalauréat, j'ai poursuivi mes études à l'IUT de Rouen, où j'ai principalement étudié les sciences pendant deux ans. En quête de ma voie, j'ai participé à <em class="impt">la piscine de l’école 42 en Mars 2023</em>, une expérience qui a révélé ma passion pour la programmation. Ainsi, j'ai entamé mon tronc commun à 42 Le Havre. Actuellement, je suis à la recherche d'un <em class="impt">stage dans le développement web</em> pour finaliser ce parcours.<br><br>
         
-        Au cours de ce tronc commun, j'ai approfondi mes connaissances en développement et découvert de nouvelles technologies, notamment le C et le C++, ainsi que le développement web avec HTML, CSS et JavaScript. J'ai participé à <em class="impt-apropos">plusieurs projets d'équipe</em> qui m'ont permis de mettre en pratique mes compétences et de les enrichir. À l'avenir, j'ai l'intention de me spécialiser davantage dans le développement web.<br><br>
+        Au cours de ce tronc commun, j'ai approfondi mes connaissances en développement et découvert de nouvelles technologies, notamment le C et le C++, ainsi que le développement web avec HTML, CSS et JavaScript. J'ai participé à <em class="impt">plusieurs projets d'équipe</em> qui m'ont permis de mettre en pratique mes compétences et de les enrichir. À l'avenir, j'ai l'intention de me spécialiser davantage dans le développement web.<br><br>
         
         Pour en savoir plus sur mes compétences, mes projets et pour me contacter, n'hésitez pas à explorer ce site et à me donner vos retours. Vous pouvez consulter mon CV en cliquant sur le lien suivant: <a class="CV" href="img/CV-Langlois-Maxime.pdf" download>Accéder au CV</a>.<br><br>
         
@@ -257,9 +257,9 @@ const aboutEN = `
         <div class="text-apropos">
         Hello and welcome to my portfolio. My name is Maxime Langlois, I am 21 years old, and I am from Normandy.<br><br>
 
-        Being passionate about computer science and sciences for many years, I naturally pursued a Scientific Baccalaureate in high school. After obtaining my baccalaureate, I joined the IUT of Rouen, where I mainly studied sciences for 2 years. Then, seeking my path, in March 2023, I attended <em class="impt-apropos">the piscine of the school 42</em> which revealed my passion for coding. Thus, I started my common core at 42 Le Havre. I am currently looking for an <em class="impt-apropos">internship in web development</em> to complete this journey.<br><br>
+        Being passionate about computer science and sciences for many years, I naturally pursued a Scientific Baccalaureate in high school. After obtaining my baccalaureate, I joined the IUT of Rouen, where I mainly studied sciences for 2 years. Then, seeking my path, in March 2023, I attended <em class="impt">the piscine of the school 42</em> which revealed my passion for coding. Thus, I started my common core at 42 Le Havre. I am currently looking for an <em class="impt">internship in web development</em> to complete this journey.<br><br>
         
-        During this common core, I deepened my knowledge in development and discovered new technologies, primarily C and C++, as well as web development with HTML, CSS, and JavaScript. I participated in <em class="impt-apropos">several team projects</em> that allowed me to apply and enrich my skills. Later on, I plan to specialize further in web development.<br><br>
+        During this common core, I deepened my knowledge in development and discovered new technologies, primarily C and C++, as well as web development with HTML, CSS, and JavaScript. I participated in <em class="impt">several team projects</em> that allowed me to apply and enrich my skills. Later on, I plan to specialize further in web development.<br><br>
         
         If you want to know more about me, my skills, and my various projects, or simply how to contact me, feel free to explore this site and give me feedback. You can view my CV by clicking on the following link: <a class="CV" href="img/CV-Langlois-Maxime.pdf" download> Access the CV</a>.<br><br>
         
@@ -274,7 +274,7 @@ const projectsFR = `
     <div class="portfolio-projet">
         <div class="portfolio-projet-text">
         <h3>Portfolio</h3>
-        À la conclusion de mon tronc commun à 42 Le Havre, j'ai créer mon premier portfolio afin de mettre à l'épreuve mes compétences en développement web frontend. Pour ce faire, j'ai utilisé <em class="impt-apropos">HTML, CSS, JavaScript</em> ainsi que le framework <em class="impt-apropos">Three.js</em> (pour intégrer mon avatar créé avec Ready-Player-Me). Ce projet m'a offert une expérience enrichissante où j'ai pris plaisir à concevoir et à coder. De plus, j'ai acquis des compétences en matière de conception responsive afin de garantir l'accessibilité de mon portfolio sur tous les types d'écrans. J'ai également découvert des outils facilitant le déploiement de sites web en ligne, tels que Vercel.
+        À la conclusion de mon tronc commun à 42 Le Havre, j'ai créer mon premier portfolio afin de mettre à l'épreuve mes compétences en développement web frontend. Pour ce faire, j'ai utilisé <em class="impt">HTML, CSS, JavaScript</em> ainsi que le framework <em class="impt">Three.js</em> (pour intégrer mon avatar créé avec Ready-Player-Me). Ce projet m'a offert une expérience enrichissante où j'ai pris plaisir à concevoir et à coder. De plus, j'ai acquis des compétences en matière de conception responsive afin de garantir l'accessibilité de mon portfolio sur tous les types d'écrans. J'ai également découvert des outils facilitant le déploiement de sites web en ligne, tels que Vercel.
         </div>
         <img class="portfolio-projet-image" src="/img/portfolio.png" alt="portfolio-projet-image" width="300" height="200">
     </div>
@@ -282,8 +282,7 @@ const projectsFR = `
         <img class="ft_transcendance-projet-image" src="/img/transcendence.png" alt="ft_transcendance-projet-image" width="300" height="200">
         <div class="ft_transcendance-projet-text">
         <h3>ft_transcendence</h3>
-        Dans ce projet, nous avons eu le défi de créer une application Web SPA sur lequel vous pouvez jouer au célèbre jeu pong et interagir avec d'autres utilisateurs. Nous pouvions personnaliser le projet selon nos envies en choisissant nous-mêmes quels modules mous implémenterons. Donc nous avons decider de mettre en place un backend et un frontend. Le backend a ete fait à l'aide de Python Django, la base de données avec MySQL et le projet a été dockerise.
-        Pour ma part, j'ai été en charge de la partie frontend, et pour cela j'ai decider d'utiliser le framework React.js. J'ai aussi choisi d'implementer le jeu en 3D en utilisant le freamework Three.js, pour associer ces 2 frameworks j'ai utilise la librairie React-Three-Fiber.    </div>
+        Dans ce projet, nous avons relevé le défi de concevoir une application Web SPA permettant de jouer au célèbre jeu Pong et d'interagir avec d'autres utilisateurs. Nous avions la liberté de personnaliser le projet selon nos préférences en choisissant les modules que nous souhaitions implémenter. Ainsi, nous avons opté pour la mise en place d'un backend et d'un frontend. Le backend a été développé en utilisant <em class="impt">Python Django</em>, avec une base de données <em class="impt">MySQL</em>, et le projet a été <em class="impt">dockerisé</em> pour faciliter sa gestion. Pour ma part, j'ai été chargé de la partie frontend, pour laquelle j'ai choisi d'utiliser le framework <em class="impt">React.js</em>. De plus, j'ai décidé d'implémenter le jeu en 3D en utilisant le framework <em class="impt">Three.js</em>. Pour combiner ces deux frameworks, j'ai utilisé la librairie <em class="impt">React-Three-Fiber</em>.
     </div>
 </section>`
 const projectsEN = `
@@ -292,15 +291,15 @@ const projectsEN = `
     <div class="portfolio-projet">
         <div class="portfolio-projet-text">
         <h3>Portfolio</h3>
-        At the conclusion of my core curriculum at 42 Le Havre, I created my first portfolio to put my frontend web development skills to the test. To accomplish this, I utilized <em class="impt-apropos">HTML, CSS, JavaScript</em> and the <em class="impt-apropos">Three.js</em> framework (to integrate my avatar created with Ready-Player-Me). This project provided me with a rewarding experience where I enjoyed both designing and coding. Additionally, I gained skills in responsive design to ensure accessibility of my portfolio across all screen types. I also discovered tools that facilitate online website deployment, such as Vercel.
+        At the conclusion of my core curriculum at 42 Le Havre, I created my first portfolio to put my frontend web development skills to the test. To accomplish this, I utilized <em class="impt">HTML, CSS, JavaScript</em> and the <em class="impt">Three.js</em> framework (to integrate my avatar created with Ready-Player-Me). This project provided me with a rewarding experience where I enjoyed both designing and coding. Additionally, I gained skills in responsive design to ensure accessibility of my portfolio across all screen types. I also discovered tools that facilitate online website deployment, such as Vercel.
+        </div>
         <img class="portfolio-projet-image" src="/img/portfolio.png" alt="portfolio-projet-image" width="300" height="200">
     </div>
     <div class="ft_transcendance-projet">
         <img class="ft_transcendance-projet-image" src="/img/transcendence.png" alt="ft_transcendance-projet-image" width="300" height="200">
         <div class="ft_transcendance-projet-text">
         <h3>ft_transcendence</h3>
-        In this project we had the challenge of creating a SPA web application on which you can play the famous pong game and interact with other users. We could customize the project according to our wishes by choosing ourselves which soft modules we would implement. So we decided to set up a backend and a frontend. The backend was made using Python Django, the database with MySQL and the project was Dockerized.
-        For my part, I was in charge of the frontend part, and for this I decided to use the React.js framework. I also chose to implement the game in 3D using the Three.js framework, to combine these 2 frameworks I used the React-Three-Fiber library. </div>
+        In this project, we faced the challenge of creating a SPA Web application where users can play the famous Pong game and interact with each other. We had the flexibility to customize the project according to our preferences by choosing which modules to implement. Therefore, we decided to set up both a backend and a frontend. The backend was built using <em class="impt">Python Django</em>, with <em class="impt">MySQL</em> as the database, and the project was <em class="impt">dockerized</em>. As for me, I was responsible for the frontend part, and for that, I chose to use the <em class="impt">React.js</em> framework. I also opted to implement the game in 3D using the <em class="impt">Three.js</em> framework. To integrate these two frameworks, I used the <em class="impt">React-Three-Fiber</em> library.
         </div>
 </section>`
 const skillsFR = `
@@ -312,8 +311,8 @@ const skillsFR = `
         <div><a href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language"><img src="/img/html.png" alt="html" width="100" height="100" id="comp1" class="logo1"></a></div>
         <div><a href="https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade"><img src="/img/css.png" alt="html" width="100" height="100" id="comp2" class="logo2"></a></div> 
         <div><a href="https://fr.wikipedia.org/wiki/JavaScript"><img src="/img/js.png" alt="html" width="100" height="100" id="comp3" class="logo3"></a></div> 
-        <div><a href="https://en.wikipedia.org/wiki/Three.js"><img src="/img/three.png" alt="html" width="100" height="100" id="comp4" class="logo4"></a></div> 
         <div><a href="https://fr.wikipedia.org/wiki/React"><img src="/img/react.png" alt="html" width="100" height="100" id="comp5" class="logo5"></a></div> 
+        <div><a href="https://en.wikipedia.org/wiki/Three.js"><img src="/img/three.png" alt="html" width="100" height="100" id="comp4" class="logo4"></a></div> 
         <div><a href="https://fr.wikipedia.org/wiki/C_(langage)"><img src="/img/c.png" alt="html" width="100" height="100" id="comp6" class="logo6"></a></div> 
         <div><a href="https://fr.wikipedia.org/wiki/C%2B%2B"><img src="/img/c++.png" alt="html" width="100" height="100" id="comp7" class="logo7"></a></div>
         <div><a href="https://fr.wikipedia.org/wiki/Git"><img src="/img/git.png" alt="html" width="100" height="100" id="comp8" class="logo8"></a></div> 
@@ -330,54 +329,14 @@ const skillsEN = `
         <div><a href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language"><img src="/img/html.png" alt="html" width="100" height="100" id="comp1" class="logo1"></a></div>
         <div><a href="https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade"><img src="/img/css.png" alt="html" width="100" height="100" id="comp2" class="logo2"></a></div> 
         <div><a href="https://fr.wikipedia.org/wiki/JavaScript"><img src="/img/js.png" alt="html" width="100" height="100" id="comp3" class="logo3"></a></div> 
-        <div><a href="https://en.wikipedia.org/wiki/Three.js"><img src="/img/three.png" alt="html" width="100" height="100" id="comp4" class="logo4"></a></div> 
         <div><a href="https://fr.wikipedia.org/wiki/React"><img src="/img/react.png" alt="html" width="100" height="100" id="comp5" class="logo5"></a></div> 
+        <div><a href="https://en.wikipedia.org/wiki/Three.js"><img src="/img/three.png" alt="html" width="100" height="100" id="comp4" class="logo4"></a></div> 
         <div><a href="https://fr.wikipedia.org/wiki/C_(langage)"><img src="/img/c.png" alt="html" width="100" height="100" id="comp6" class="logo6"></a></div> 
         <div><a href="https://fr.wikipedia.org/wiki/C%2B%2B"><img src="/img/c++.png" alt="html" width="100" height="100" id="comp7" class="logo7"></a></div>
         <div><a href="https://fr.wikipedia.org/wiki/Git"><img src="/img/git.png" alt="html" width="100" height="100" id="comp8" class="logo8"></a></div> 
         <div><a href="https://fr.wikipedia.org/wiki/Linux"><img src="/img/linux.jpg" alt="html" width="100" height="100" id="comp9" class="logo9"></a></div> 
     </div>
 </div>
-</section>`
-const schoolEN = `
-<section id="Etudes" class="etudes">
-    <div class="text1">
-    <h2 class="title">Etudes</h2>
-    <div class="text2">
-    <div class="school">
-        <div class="school1">
-            <div class="img-container1">
-                <img src="/img/42lh.png" alt="42LeHavre" class="img-school1-1">
-                <img src="/img/vue42.png" alt="vue42" class="img-school1-2">
-            </div>
-            <div class="school-div1">
-            <h3 class="school-title-1">42 Le Havre</h3>
-            <p class="school-text-1">C'est à la piscine de 42 que j'ai découvert la passion du code et où je me suis amusé pendant un mois à apprendre le plus possible le langage C. J'ai ensuite été sélectionné pour rejoindre la première promo au Havre où j'ai éffectue mon tronc commun et appris le C, C++, les machines virtuelles, les dockers et le web.</p>
-            </div>
-        </div> 
-        <div class="school2">
-            <div class="img-container2">
-                <img src="/img/iut.jpg" alt="iut" class="img-school2-1">
-                <img src="/img/vueiut.jpg" alt="vue iut" class="img-school2-2">
-            </div>
-            <div class="school-div2">
-                <h3 class="school-title-2">IUT de Rouen</h3>
-                <p class="school-text-2">J'ai suivi 2 années de cours à l'IUT de Rouen (une année de DUT Genie Chimique Genie des Procédés et une année de BUT Mesure Physique), c'est ici que j'ai assisté pour la première fois à des cours d'informatiques en voyant les bases du C++.</p>
-            </div>
-        </div>
-        <div class="school3">
-            <div class="img-container3">
-                <img src="/img/lycee.jpg" alt="lycee" class="img-school3-1">
-                <img src="/img/vuelycee.jpg" alt="vue lycee" class="img-school3-2">
-            </div>
-            <div class="school-div3">
-                <h3 class="school-title-3">Lycee Jehan Ango</h3>
-                <p class="school-text-3">J'ai passé mon Baccaleureat Scientifique au lycée Jehan Ango ou j'ai fait de la seconde à la terminale, en apprenant notamment les mathématiques la physique et l'espagnol.</p>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
 </section>`
 const schoolFR = `
 <section id="Etudes" class="etudes">
@@ -386,13 +345,14 @@ const schoolFR = `
     <div class="text2">
     <div class="school">
         <div class="school1">
-            <div class="img-container1">
-                <img src="/img/42lh.png" alt="42LeHavre" class="img-school1-1">
-                <img src="/img/vue42.png" alt="vue42" class="img-school1-2">
+            <div class="img-container3">
+                <img src="/img/lycee.jpg" alt="lycee" class="img-school3-1">
+                <img src="/img/vuelycee.jpg" alt="vue lycee" class="img-school3-2">
             </div>
-            <div class="school-div1">
-            <h3 class="school-title-1">42 Le Havre</h3>
-            <p class="school-text-1">It was at the 42 swimming pool that I discovered my passion for coding and where I had fun for a month learning as much of the C language as possible. I was then selected to join the first class in Le Havre where I I completed my common core and learned C, C++, virtual machines, dockers and the web.</p>
+            <div class="school-div3">
+                <h3 class="school-title-3">Lycee Jehan Ango</h3>
+                <p class="school-text-3">
+                J'ai obtenu mon baccalauréat scientifique au lycée Jehan Ango, où j'ai suivi mes études de la seconde à la terminale. Durant cette période, j'ai acquis des connaissances en mathématiques, en physique, ainsi qu'en anglais et en espagnol.</p>
             </div>
         </div> 
         <div class="school2">
@@ -402,19 +362,60 @@ const schoolFR = `
             </div>
             <div class="school-div2">
                 <h3 class="school-title-2">IUT de Rouen</h3>
-                <p class="school-text-2">I followed 2 years of courses at the IUT of Rouen (one year of DUT Chemical Engineering Process Engineering and one year of BUT Physical Measurement), it is here that I attended courses for the first time. computer science by seeing the basics of C++.</p>
+                <p class="school-text-2">Pendant deux ans, j'ai suivi des cours à l'IUT de Rouen, où j'ai suivi une année de DUT en Génie Chimique Génie des Procédés, suivie d'une année en BUT en Mesure Physique. C'est là que j'ai été exposé pour la première fois aux cours d'informatique, où j'ai découvert les bases du langage C++.</p>
             </div>
         </div>
         <div class="school3">
-            <div class="img-container3">
-                <img src="/img/lycee.jpg" alt="lycee" class="img-school3-1">
-                <img src="/img/vuelycee.jpg" alt="vue lycee" class="img-school3-2">
+            <div class="img-container1">
+                <img src="/img/42lh.png" alt="42LeHavre" class="img-school1-1">
+                <img src="/img/vue42.png" alt="vue42" class="img-school1-2">
             </div>
-            <div class="school-div3">
-                <h3 class="school-title-3">Lycee Jehan Ango</h3>
-                <p class="school-text-3">I passed my Scientific Baccalaureate at the Jehan Ango high school where I studied from second to final year, learning in particular mathematics, physics and Spanish.</p>
+            <div class="school-div1">
+            <h3 class="school-title-1">42 Le Havre</h3>
+            <p class="school-text-1">C'est à la piscine de 42 que j'ai découvert ma passion pour la programmation, où j'ai passé un mois à m'amuser tout en apprenant intensivement le langage C. Par la suite, j'ai été sélectionné pour rejoindre la première promotion à l'école du Havre, où j'ai suivi le tronc commun et acquis des compétences en C, C++, en utilisation de machines virtuelles, de dockers, ainsi que dans le domaine du développement web.</p>
             </div>
+            
         </div>
+    </div>
+    </div>
+    </div>
+</section>`
+const schoolEN = `
+<section id="Etudes" class="etudes">
+    <div class="text1">
+    <h2 class="title">Etudes</h2>
+    <div class="text2">
+    <div class="school">
+        <div class="school1">
+        <div class="img-container3">
+        <img src="/img/lycee.jpg" alt="lycee" class="img-school3-1">
+        <img src="/img/vuelycee.jpg" alt="vue lycee" class="img-school3-2">
+        </div>
+        <div class="school-div3">
+            <h3 class="school-title-3">Lycee Jehan Ango</h3>
+            <p class="school-text-3">I completed my Scientific Baccalaureate at Jehan Ango High School. During this time, I gained knowledge in mathematics, physics, as well as English and Spanish.</p>
+        </div>
+        </div> 
+    <div class="school2">
+        <div class="img-container2">
+            <img src="/img/iut.jpg" alt="iut" class="img-school2-1">
+            <img src="/img/vueiut.jpg" alt="vue iut" class="img-school2-2">
+        </div>
+        <div class="school-div2">
+            <h3 class="school-title-2">IUT de Rouen</h3>
+            <p class="school-text-2">During two years, I attended courses at the IUT of Rouen, where I completed one year of DUT in Chemical Engineering Process Engineering, followed by one year in a BUT in Physical Measurement. It was there that I was first exposed to computer science courses, where I discovered the basics of the C++ language.</p>
+        </div>
+    </div>
+    <div class="school3">
+        <div class="img-container1">
+            <img src="/img/42lh.png" alt="42LeHavre" class="img-school1-1">
+            <img src="/img/vue42.png" alt="vue42" class="img-school1-2">
+        </div>
+        <div class="school-div1">
+        <h3 class="school-title-1">42 Le Havre</h3>
+        <p class="school-text-1">It was at the 42 swimming pool where I discovered my passion for coding and spent a month having fun while learning as much as possible about the C language. I was then selected to join the first cohort at Le Havre, where I completed my core curriculum and learned C, C++, virtual machines, Docker, and web development.</p>
+        </div>
+    </div>
     </div>
     </div>
     </div>
