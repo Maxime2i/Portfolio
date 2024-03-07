@@ -186,8 +186,8 @@ const headerFR = `<header class="header">
             <li class="m"><a href="#/skills" class="m-competences">Competences</a></li>
             <li class="m"><a href="#/studies" class="m-etudes">Etudes</a></li>
             <li class="m"><a href="#/contact" class="m-contact">Contact</a></li>
-            <li class="optionBtn"><img id="imgTheme" class="icon m-contact" src="img/brightness2.png" alt="Change Theme"></li>
-            <li class="optionBtn"><img id="imgLanguage" class="icon m-contact" src="img/language2.png" alt="Change Language"></li> 
+            <li class="optionBtn"><img id="imgTheme" class="icon m-contact" src="img/brightness.png" alt="Change Theme"></li>
+            <li class="optionBtn"><img id="imgLanguage" class="icon m-contact" src="img/language.png" alt="Change Language"></li> 
                 
             
         </ul>
@@ -215,8 +215,8 @@ const headerEN = `<header class="header">
         <li class="m"><a href="#/skills" class="m-competences">Skills</a></li>
         <li class="m"><a href="#/studies" class="m-etudes">Studies</a></li>
         <li class="m"><a href="#/contact" class="m-contact">Contact</a></li>
-        <li class="optionBtn"><img id="imgTheme" class="icon m-contact" src="img/brightness2.png" alt="Change Theme"></li>
-        <li class="optionBtn"><img id="imgLanguage" class="icon m-contact" src="img/language2.png" alt="Change Language"></li> 
+        <li class="optionBtn"><img id="imgTheme" class="icon m-contact" src="img/brightness.png" alt="Change Theme"></li>
+        <li class="optionBtn"><img id="imgLanguage" class="icon m-contact" src="img/language.png" alt="Change Language"></li> 
             
         
     </ul>
