@@ -215,8 +215,8 @@ const headerEN = `<header class="header">
         <li class="m"><a href="#/competences" class="m-competences">Skills</a></li>
         <li class="m"><a href="#/etudes" class="m-etudes">Studies</a></li>
         <li class="m"><a href="#/contact" class="m-contact">Contact</a></li>
-        <li class="optionBtn"><img id="imgTheme" onClick="changeTheme()" class="icon" src="img/brightness2.png" alt="Change Theme"></li>
-        <li class="optionBtn"><img id="imgLanguage" class="icon" src="img/language2.png" alt="Change Language"></li> 
+        <li class="optionBtn"><img id="imgTheme" class="icon m-contact" src="img/brightness2.png" alt="Change Theme"></li>
+        <li class="optionBtn"><img id="imgLanguage" class="icon m-contact" src="img/language2.png" alt="Change Language"></li> 
             
         
     </ul>
@@ -489,13 +489,15 @@ function changeTheme() {
     }
 }
 
-
+let clickAutorise = true
 function translateTo(){
-    if (language === 0)
-        language = 1
-    else 
-        language = 0
+    if (clickAutorise === true){
+        if (language === 0)
+            language = 1
+        else 
+            language = 0
     handleRouting()
+    }
   }
 
 function setMenu(){
@@ -608,6 +610,7 @@ function changeColor(contenu, isCanvas) {
     var lien4 = document.querySelector('.m-etudes')
     var lien5 = document.querySelector('.m-contact')
 
+    clickAutorise = false
     lien1.style.pointerEvents = 'none'
     lien2.style.pointerEvents = 'none'
     lien3.style.pointerEvents = 'none'
@@ -625,6 +628,7 @@ function changeColor(contenu, isCanvas) {
         transition.classList.add('active2')
         transition.addEventListener("animationend", function() {
             transition.classList.remove("active2");
+            clickAutorise = true
             lien1.style.pointerEvents = 'auto'
             lien2.style.pointerEvents = 'auto'
             lien3.style.pointerEvents = 'auto'
