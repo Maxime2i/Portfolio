@@ -476,6 +476,9 @@ a {
     margin-bottom: 2%;
 }
 
+.lienProjet{
+    color: var(--lien);
+}
 
 /*PROJET : PORTFOLIO*/
 .portfolio-projet{
