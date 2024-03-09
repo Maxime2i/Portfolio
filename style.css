@@ -14,7 +14,7 @@ body{
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 80vh;
+    height: 100%;
     background-color: var(--background);
     color: var(--write);
     font-family: "Montserrat", sans-serif;
@@ -555,7 +555,6 @@ a {
 
 .ft_irc-projet-image{
     width: 19vw;
-    height: auto;
     border: 2px solid var(--lien);
     margin-left: 2%;
 }
