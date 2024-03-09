@@ -693,7 +693,7 @@ a {
 
 .etudes{
     width: 100%;
-    height: 50%;
+    height: auto;
     position: relative;
     z-index: 5;
  
@@ -712,6 +712,7 @@ a {
     position: relative;
     width: 95%;
     margin: 0 5%;
+    height: auto;
 }
 
 .etudes .title{
@@ -725,7 +726,9 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 100%;
+    width: 100%;    
+    height: auto;
+    margin-bottom: 10%;
 }
 
 /* SCHOOL 1 */
@@ -767,6 +770,7 @@ a {
     flex-direction: column;
     padding-left: 5%;
     margin-top: 30vh;
+    background: red;
 }
 
 /* SCHOOL 2 */
@@ -774,7 +778,7 @@ a {
 .etudes .school .school2{
     display: flex;
     flex-direction: column;
-    width: 18vw;
+    width: 20vw;
     height: 70vh;
 }
 
@@ -793,7 +797,6 @@ a {
     width: 18vw;
     height: 30vh;
     backface-visibility: hidden;
-    margin-top: 30vh;
 }
 
 .img-school2-2{
@@ -802,13 +805,14 @@ a {
     height: 30vh;
     backface-visibility: hidden;
     transform: rotateY(180deg);
-    margin-top: 30vh;
 }
 
 .school-div2{
     display: flex;
     flex-direction: column;
-    padding-right: 5%
+    padding-left: 5%;
+    margin-top: 30vh;
+    background: red;
 }
 
 
@@ -816,7 +820,7 @@ a {
 .etudes .school .school3{
     display: flex;
     flex-direction: column;
-    width: 18vw;
+    width: 20vw;
     height: 70vh;
 }
 
@@ -850,6 +854,7 @@ a {
     flex-direction: column;
     padding-left: 5%;
     margin-top: 30vh;
+    background: red;
 }
 
 
