@@ -295,7 +295,6 @@ a {
     .menu{
         display: block;
         position: absolute;
-        opacity: 1;
         transform: translateX(100%);
         transition: all 800ms cubic-bezier(.8, 0, .33, 1);
         position: absolute;
@@ -312,7 +311,6 @@ a {
     }
     .menu.open{
         transform: translateX(0%);
-        opacity: 1;
     }
     .btn-menu{
         display: initial;
@@ -722,7 +720,6 @@ a {
 
 
 .etudes .school{
-  
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -770,7 +767,6 @@ a {
     flex-direction: column;
     padding-left: 5%;
     margin-top: 30vh;
-    background: red;
 }
 
 /* SCHOOL 2 */
@@ -812,7 +808,6 @@ a {
     flex-direction: column;
     padding-left: 5%;
     margin-top: 30vh;
-    background: red;
 }
 
 
@@ -854,7 +849,6 @@ a {
     flex-direction: column;
     padding-left: 5%;
     margin-top: 30vh;
-    background: red;
 }
 
 
