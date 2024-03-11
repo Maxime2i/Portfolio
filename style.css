@@ -18,7 +18,7 @@ body{
     background-color: var(--background);
     color: var(--write);
     font-family: "Montserrat", sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
   }
   
 a {
