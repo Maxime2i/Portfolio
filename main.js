@@ -239,7 +239,7 @@ const aboutFR = `
         <div class="text-apropos">
         Bonjour et bienvenue sur mon portfolio. Je suis Maxime Langlois, âgé de 21 ans et originaire de Normandie.<br><br>
 
-        Ma passion pour l’informatique et les sciences m'a conduit à suivre un cursus en sciences au lycée. Après l'obtention de mon baccalauréat, j'ai poursuivi mes études à l'IUT de Rouen, où j'ai principalement étudié les sciences pendant deux ans. En quête de ma voie, j'ai participé à <em class="impt">la piscine de l’école 42 en Mars 2023</em>, une expérience qui a révélé ma passion pour la programmation. Ainsi, j'ai entamé mon tronc commun à 42 Le Havre. Actuellement, je suis à la recherche d'un <em class="impt">stage dans le développement web</em> pour finaliser ce parcours.<br><br>
+        Ma passion pour l’informatique et les sciences m'a conduit à suivre un cursus en sciences au lycée. Après l'obtention de mon baccalauréat, j'ai poursuivi mes études à l'IUT de Rouen, où j'ai principalement étudié les sciences pendant deux ans. En quête de ma voie, j'ai participé à <em class="impt">la piscine de l’école 42 en Mars 2023</em>, une expérience qui a révélé ma passion pour la programmation. Ainsi, j'ai entamé mon tronc commun à 42 Le Havre.<br><br>
         
         Au cours de ce tronc commun, j'ai approfondi mes connaissances en développement et découvert de nouvelles technologies, notamment le C et le C++, ainsi que le développement web avec HTML, CSS et JavaScript. J'ai participé à <em class="impt">plusieurs projets d'équipe</em> qui m'ont permis de mettre en pratique mes compétences et de les enrichir. À l'avenir, j'ai l'intention de me spécialiser davantage dans le développement web.<br><br>
         
@@ -258,7 +258,7 @@ const aboutEN = `
         <div class="text-apropos">
         Hello and welcome to my portfolio. My name is Maxime Langlois, I am 21 years old, and I am from Normandy.<br><br>
 
-        Being passionate about computer science and sciences for many years, I naturally pursued a Scientific Baccalaureate in high school. After obtaining my baccalaureate, I joined the IUT of Rouen, where I mainly studied sciences for 2 years. Then, seeking my path, in March 2023, I attended <em class="impt">the piscine of the school 42</em> which revealed my passion for coding. Thus, I started my common core at 42 Le Havre. I am currently looking for an <em class="impt">internship in web development</em> to complete this journey.<br><br>
+        Being passionate about computer science and sciences for many years, I naturally pursued a Scientific Baccalaureate in high school. After obtaining my baccalaureate, I joined the IUT of Rouen, where I mainly studied sciences for 2 years. Then, seeking my path, in March 2023, I attended <em class="impt">the piscine of the school 42</em> which revealed my passion for coding. Thus, I started my common core at 42 Le Havre.<br><br>
         
         During this common core, I deepened my knowledge in development and discovered new technologies, primarily C and C++, as well as web development with HTML, CSS, and JavaScript. I participated in <em class="impt">several team projects</em> that allowed me to apply and enrich my skills. Later on, I plan to specialize further in web development.<br><br>
         
